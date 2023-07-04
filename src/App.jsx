@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 // Layouts
 import AuthLayout from "./layout/AuthLayout"
-import RootLayout from "./layout/RootLayout"
+import RootLayout, { rootLoader } from "./layout/RootLayout"
 //Pages
 import Login from "./pages/Login"
 import Register from "./pages/Register"
@@ -42,6 +42,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    loader: rootLoader,
     children: [
       {
         path:"attendance",
