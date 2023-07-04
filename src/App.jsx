@@ -9,6 +9,8 @@ import Attendance from "./pages/Attendance"
 import Dashboard from "./pages/Dashboard"
 import Report from "./pages/Report"
 import Student from "./pages/Student"
+import ForgotPass from "./pages/ForgotPass"
+import Verification from "./pages/Verification"
 
 const router = createBrowserRouter([
   {
@@ -17,11 +19,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
-        element: <Login />
+        element: <Login />,
+        children: [
+          {
+            path: "identify",
+            element: <ForgotPass />
+          }
+        ]
       },
       {
         path: "register",
-        element: <Register />
+        element: <Register />,
+        children: [
+          {
+            path: "verification",
+            element: <Verification />
+          }
+        ]
       },
     ]
   },
