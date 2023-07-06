@@ -16,7 +16,7 @@ const RootLayout = () => {
         <Navbar username={username}/>
         <div>
             <Sidebar username={username} />
-            <div className="fixed container ml-80 pt-28">
+            <div className="fixed right-0 px-20 pt-28 w-[calc(100vw-18rem)]">
                 <Outlet />
             </div>
         </div>

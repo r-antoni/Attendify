@@ -7,7 +7,7 @@ import LogoutIcon from "../assets/logout.svg";
 
 const Sidebar = ({username}) => {
     return (
-        <div className="fixed h-full top-16 shadow-lg">
+        <div className="fixed h-full top-16 shadow-lg w-72">
             <div className="flex flex-col justify-between bg-white min-h-screen pl-6 pr-10 pt-6">
                 <div className="flex flex-col gap-2">
                     <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Track</h3> 
