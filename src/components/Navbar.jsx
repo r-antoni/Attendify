@@ -1,6 +1,5 @@
 import React from "react";
 import BellIcon from "../assets/notif.svg";
-import MessageIcon from "../assets/messagenotif.svg";
 import Profile from "../assets/pic.svg";
 
 const Navbar = ({ username, visibility }) => {
@@ -10,7 +9,6 @@ const Navbar = ({ username, visibility }) => {
         <div className="text-3xl text-title font-semibold">Attendify</div>
         <div className={`flex gap-10 items-center ${visibility}`}>
           <img src={BellIcon} />
-          <img src={MessageIcon} />
           <div className="flex gap-2 items-center">
             <img src={Profile} />
             <div className="font-medium">{username}</div>
