@@ -1,16 +1,19 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 // Layouts
 import AuthLayout from "./layout/AuthLayout"
-import RootLayout from "./layout/RootLayout"
+import RootLayout, { rootLoader } from "./layout/RootLayout"
+//AuthPages
+import Login from "./pages/Login/LoginPage"
+import ForgotPass from "./pages/Login/ForgotPass"
+import Register from "./pages/Register/RegisterPage"
+import Verification from "./pages/Register/Verification"
 //Pages
-import Login from "./pages/Login"
-import Register from "./pages/Register"
 import Attendance from "./pages/Attendance"
 import Dashboard from "./pages/Dashboard"
 import Report from "./pages/Report"
 import Student from "./pages/Student"
-import ForgotPass from "./pages/ForgotPass"
-import Verification from "./pages/Verification"
+
+
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    loader: rootLoader,
     children: [
       {
         path:"attendance",
