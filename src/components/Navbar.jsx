@@ -1,6 +1,6 @@
 import React from "react";
-import BellIcon from "../assets/notif.svg";
-import Profile from "../assets/pic.svg";
+import BellIcon from "../assets/icons/notif.svg";
+import Profile from "../assets/icons/pic.svg";
 
 const Navbar = ({ username, visibility }) => {
   return (
