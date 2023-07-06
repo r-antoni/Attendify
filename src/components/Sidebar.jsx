@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import AttendanceIcon from "../assets/attendance.svg";
-import DashboardIcon from "../assets/dashboard.svg";
-import ReportIcon from "../assets/report.svg";
-import StudentIcon from "../assets/student.svg";
-import LogoutIcon from "../assets/logout.svg";
+import AttendanceIcon from "../assets/icons/attendance.svg";
+import DashboardIcon from "../assets/icons/dashboard.svg";
+import ReportIcon from "../assets/icons/report.svg";
+import StudentIcon from "../assets/icons/student.svg";
+import LogoutIcon from "../assets/icons/logout.svg";
 
 const Sidebar = ({username}) => {
     return (
