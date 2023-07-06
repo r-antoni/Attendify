@@ -5,7 +5,7 @@ import Button from './reuseable/Button'
 const LoginForm = () => {
   return (
     <div className="">
-      <form className="flex flex-col gap-10 justify-center min-h-screen pr-32">
+      <form className="flex flex-col gap-10 justify-center min-h-screen px-20">
         <div className="flex gap-10">
           <InputButton name="Teacher" textcolor="text-secondary" background="bg-transparent" border="border-[1px] border-secondary" />
           <InputButton name="Admin" textcolor="text-secondary" background="bg-transparent" border="border-[1px] border-secondary" />
