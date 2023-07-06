@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import AttendanceIcon from "../assets/attendance.svg"
-import DashboardIcon from "../assets/dashboard.svg"
-import ReportIcon from "../assets/report.svg"
-import StudentIcon from "../assets/student.svg"
-import LogoutIcon from "../assets/logout.svg"
+import AttendanceIcon from "../assets/attendance.svg";
+import DashboardIcon from "../assets/dashboard.svg";
+import ReportIcon from "../assets/report.svg";
+import StudentIcon from "../assets/student.svg";
+import LogoutIcon from "../assets/logout.svg";
 
 const Sidebar = () => {
     return (
@@ -12,10 +12,9 @@ const Sidebar = () => {
                 <div className="flex flex-col gap-2">
                     <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Track</h3>
                     <NavLink className="flex gap-2 px-2 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/attendance">
-                        <img src={AttendanceIcon}/>
+                        <img src={AttendanceIcon} />
                         Attendance Sheet
                     </NavLink>
-
                     <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Analyze</h3>
                     <NavLink className="flex gap-2 px-2 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/dashboard">
                         <img src={DashboardIcon} />
@@ -25,14 +24,12 @@ const Sidebar = () => {
                         <img src={ReportIcon} />
                         Report
                     </NavLink>
-
                     <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Manage</h3>
                     <NavLink className="flex gap-2 px-2 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/">
                         <img src={StudentIcon} />
                         Students
                     </NavLink>
                 </div>
-
                 <div className="fixed bottom-10">
                     <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Username</h3>
                     <NavLink className="flex gap-2 px-2 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/">
@@ -43,6 +40,6 @@ const Sidebar = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Sidebar;
