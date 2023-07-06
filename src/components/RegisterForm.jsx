@@ -4,12 +4,12 @@ import Button from "./reuseable/Button"
 const RegisterForm = () => {
   return (
     <div>
-      <form className="flex flex-col gap-10 justify-center min-h-screen pr-32">
+      <form className="flex flex-col gap-10 justify-center min-h-screen px-20">
         <div className="flex flex-col gap-6">
-          <InputText name="username" label="Username" type="text" />
-          <InputText name="email" label="Email" type="email" />
-          <InputText name="password" label="Password" type="password" />
-          <InputText name="repeatPassword" label="Repeat Password" type="password" />
+          <InputText name="username" label="Username" type="text" width="w-80"/>
+          <InputText name="email" label="Email" type="email" width="w-80"/>
+          <InputText name="password" label="Password" type="password" width="w-80"/>
+          <InputText name="repeatPassword" label="Repeat Password" type="password" width="w-80"/>
         </div>
         <div className="flex flex-col items-start gap-4">
           <Button type="submit">Sign up</Button>
