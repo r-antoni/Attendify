@@ -9,7 +9,6 @@ const AuthLayout = () => {
       <div className='flex flex-col justify-center'>
         <Outlet />
       </div>
-      
     </div>
   )
 }
