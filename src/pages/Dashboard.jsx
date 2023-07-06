@@ -114,7 +114,7 @@ const Dashboard = () => {
                 <h2 className="text-secondary text-xl">
                   Reports <span className="text-sm text-slate-300">/Today</span>
                 </h2>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" aspect={2}>
                   <LineChart
                     width={500}
                     height={300}
@@ -139,12 +139,12 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="w-96 h-96">
+        <div className="w-112">
           <Card>
             <h2 className="text-secondary text-xl">
               Attendance Report <span className="text-sm text-slate-300">| This Month</span>
             </h2>
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" aspect={1}>
               <RadarChart cx="50%" cy="50%" outerRadius="80%" data={attendanceReports}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="subject" />
