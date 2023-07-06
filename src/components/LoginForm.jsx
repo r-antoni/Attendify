@@ -20,7 +20,7 @@ const LoginForm = () => {
           </div>
           <Button type="submit">Sign In</Button>
           <a className="text-slate-500 text-xs font-normal" href="/">Forgot Password ?</a>
-          <p className="text-sm">Dont have an account? <a className="text-blue-400" href="/">Register Here</a></p>
+          <p className="text-sm">Dont have an account? <a className="text-blue-400" href="/register">Register Here</a></p>
         </div>
       </form>
     </div>
