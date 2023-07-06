@@ -4,15 +4,15 @@ import Button from './reuseable/Button'
 
 const LoginForm = () => {
   return (
-    <div className="">
+    <div>
       <form className="flex flex-col gap-10 justify-center min-h-screen px-20">
         <div className="flex gap-10">
           <InputButton name="Teacher" textcolor="text-secondary" background="bg-transparent" border="border-[1px] border-secondary" />
           <InputButton name="Admin" textcolor="text-secondary" background="bg-transparent" border="border-[1px] border-secondary" />
         </div>
         <div className="flex flex-col gap-6">
-          <InputText name="username" label="Username" type="text"/>
-          <InputText name="password" label="Password" type="password"/>
+          <InputText name="username" label="Username" type="text" />
+          <InputText name="password" label="Password" type="password" />
         </div>
         <div className="flex flex-col items-start gap-4">
           <div className="flex items-center text-sm gap-2">
