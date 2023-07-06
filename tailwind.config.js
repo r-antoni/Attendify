@@ -12,6 +12,9 @@ export default {
         secondary: "#4154F1",
         title: "#012970",
       },
+      width: {
+        '112': '28rem',
+      },
     },
   },
   plugins: [
