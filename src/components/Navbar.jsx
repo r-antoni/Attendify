@@ -8,10 +8,10 @@ const Navbar = ({ username, visibility }) => {
     <div className="fixed w-full z-10 bg-white">
       <div className="flex justify-between items-center h-16 px-20 py-4 shadow-md">
         <div className="text-3xl text-title font-semibold">Attendify</div>
-        <div className={`flex gap-10 items-center ${visibility}`}>
+        <div className={`flex gap-5 items-center ${visibility}`}>
           <img src={BellIcon} />
           <img src={MessageIcon} />
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-3 items-center">
             <img src={Profile} />
             <div className="font-medium">{username}</div>
           </div>

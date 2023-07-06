@@ -13,11 +13,11 @@ export function rootLoader(){
 const RootLayout = () => {
     const {username} = useLoaderData ()
   return (
-    <div className="bg-[#EDF1F7] min-h-screen">
+    <div className="bg-[#EDF1F7] min-h-screen w-full">
         <Navbar username={username}/>
         <div>
-            <Sidebar />
-            <div className="container pt-20">
+            <Sidebar username={username} />
+            <div className="fixed container ml-80 pt-28">
                 <Outlet />
             </div>
         </div>
