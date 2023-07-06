@@ -12,7 +12,7 @@ const Sidebar = () => {
                 <div className="flex flex-col gap-2">
                     <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Track</h3>
                     <NavLink className="flex gap-2 px-2 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/attendance">
-                        <img src={AttendanceIcon}/>
+                        <img src={AttendanceIcon} />
                         Attendance Sheet
                     </NavLink>
 
@@ -33,7 +33,7 @@ const Sidebar = () => {
                     </NavLink>
                 </div>
 
-                <div className="fixed bottom-10">
+                <div className="fixed bottom-10 ">
                     <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Username</h3>
                     <NavLink className="flex gap-2 px-2 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/">
                         <img src={LogoutIcon} />
