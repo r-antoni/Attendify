@@ -11,8 +11,8 @@ const LoginForm = () => {
           <InputButton name="Admin" textcolor="text-secondary" background="bg-transparent" border="border-[1px] border-secondary" />
         </div>
         <div className="flex flex-col gap-6">
-          <InputText name="username" label="Username" type="text"/>
-          <InputText name="password" label="Password" type="password"/>
+          <InputText name="username" label="Username" type="text" />
+          <InputText name="password" label="Password" type="password" />
         </div>
         <div className="flex flex-col items-start gap-4">
           <div className="flex items-center text-sm gap-2">

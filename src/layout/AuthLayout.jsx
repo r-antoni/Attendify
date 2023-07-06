@@ -6,7 +6,7 @@ const AuthLayout = () => {
   return (
     <div className="bg-[#EDF1F7]">
       <Navbar visibility="hidden" />
-      <div className='flex flex-col justify-center'>
+      <div className='flex justify-center'>
         <Outlet />
       </div>
     </div>
