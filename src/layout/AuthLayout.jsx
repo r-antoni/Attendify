@@ -1,8 +1,6 @@
-import React from 'react'
-
 const AuthLayout = () => {
   return (
-    <div>AuthLayout</div>
+    <div>AuthLayou</div>
   )
 }
 
