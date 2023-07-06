@@ -11,7 +11,7 @@ import Verification from "./pages/Register/Verification"
 import Attendance from "./pages/Attendance"
 import Dashboard from "./pages/Dashboard"
 import Report from "./pages/Report"
-import Student from "./pages/Student"
+import Students from "./pages/Students"
 
 
 
@@ -60,8 +60,8 @@ const router = createBrowserRouter([
         element: <Report />
       },
       {
-        path: "student",
-        element: <Student />
+        path: "students",
+        element: <Students />
       },
     ]
   }
