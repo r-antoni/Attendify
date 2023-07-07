@@ -1,5 +1,3 @@
-import React from "react";
-
 const LoginText = () => {
   return (
     <div className="flex justify-center min-h-screen items-center">
