@@ -2,7 +2,7 @@ import React from "react";
 import BellIcon from "../assets/icons/notif.svg";
 import Profile from "../assets/icons/pic.svg";
 
-const Navbar = ({ username, visibility }) => {
+const Navbar = ({visibility}) => {
   return (
     <div className="fixed w-full z-10 bg-white">
       <div className="flex justify-between items-center h-16 px-20 py-4 shadow-md">
@@ -11,7 +11,7 @@ const Navbar = ({ username, visibility }) => {
           <img src={BellIcon} />
           <div className="flex gap-2 items-center">
             <img src={Profile} />
-            <div className="font-medium">{username}</div>
+            <div className="font-medium">Username</div>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -13,12 +13,9 @@ export default {
         title: "#012970",
       },
       width: {
-        '112': '28rem',
+        112: "28rem",
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'), require('flowbite/plugin')
-  ],
-}
-
+  plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],
+};

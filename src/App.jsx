@@ -1,34 +1,32 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-// Layouts
-import AuthLayout from "./layout/AuthLayout"
-import RootLayout, { rootLoader } from "./layout/RootLayout"
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+//Private & Protected Route
+import PrivateRoute from "./router/PrivateRoute";
+import ProtectedRoute from "./router/ProtectedRoutes";
 //AuthPages
-import Login from "./pages/Login/LoginPage"
-import ForgotPass from "./pages/Login/ForgotPass"
-import Register from "./pages/Register/RegisterPage"
-import Verification from "./pages/Register/Verification"
+import Login from "./pages/Login/LoginPage";
+import ForgotPass from "./pages/Login/ForgotPass";
+import Register from "./pages/Register/RegisterPage";
+import Verification from "./pages/Register/Verification";
 //Pages
-import Attendance from "./pages/Attendance"
-import Dashboard from "./pages/Dashboard"
-import Report from "./pages/Report"
-import Students from "./pages/Students"
-
-
+import Attendance from "./pages/Attendance";
+import Dashboard from "./pages/Dashboard";
+import Report from "./pages/Report";
+import Students from "./pages/Students";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AuthLayout />,
+    element: <ProtectedRoute />,
     children: [
       {
         path: "login",
-        element: <Login />, 
+        element: <Login />,
         children: [
           {
             path: "identify",
-            element: <ForgotPass />
-          }
-        ]
+            element: <ForgotPass />,
+          },
+        ],
       },
       {
         path: "register",
@@ -36,44 +34,42 @@ const router = createBrowserRouter([
         children: [
           {
             path: "verification",
-            element: <Verification />
-          }
-        ]
+            element: <Verification />,
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     path: "/",
-    element: <RootLayout />,
-    loader: rootLoader,
+    element: <PrivateRoute />,
     children: [
       {
-        path:"attendance",
-        element: <Attendance />
+        path: "attendance",
+        element: <Attendance />,
       },
       {
         path: "dashboard",
-        element: <Dashboard />
+        element: <Dashboard />,
       },
       {
         path: "report",
-        element: <Report />
+        element: <Report />,
       },
       {
         path: "students",
-        element: <Students />
+        element: <Students />,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
 
 function App() {
-
   return (
     <>
       <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
