@@ -1,8 +1,16 @@
 import React from "react";
 import Auth from "../utils/Auth"
 import { Navigate, Outlet } from "react-router-dom";
+import RootLayout from "../layout/RootLayout";
 
-const PrivateRoute = () => {
-    Auth.authenticated ? <Outlet /> : <Navigate to="/login"/>
+export default function PrivateRoute() {
+	if (Auth.authenticated()) {
+		return (
+			<RootLayout>
+				<Outlet />
+			</RootLayout>
+		);
+	}
+
+	return <Navigate to="/login" />;
 }
-export default PrivateRoute

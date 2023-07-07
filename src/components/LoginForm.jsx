@@ -1,21 +1,10 @@
 import InputButton from "./reuseable/InputButton";
 import InputText from "./reuseable/InputText";
 import Button from "./reuseable/Button";
-import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
-
 
 const LoginForm = () => {
-  const navigate = useNavigate();
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		const formData = new FormData(e.target);
-		const userData = Object.entries(formData);
-		Cookies.set("token", btoa(userData.password));
-		navigate("/dashboard");
-	};
   return (
-    <form className="flex flex-col gap-10 justify-center min-h-screen px-20" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-10 justify-center min-h-screen px-20">
       <div className="flex gap-10">
         <InputButton
           name="Teacher"
