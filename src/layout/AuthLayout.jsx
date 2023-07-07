@@ -1,6 +1,6 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+import React from "react";
+import {Outlet} from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const AuthLayout = () => {
   return (
@@ -10,7 +10,7 @@ const AuthLayout = () => {
         <Outlet />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AuthLayout
+export default AuthLayout;
