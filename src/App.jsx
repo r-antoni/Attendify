@@ -1,9 +1,7 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+//Private & Protected Route
 import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
-// Layouts
-// import AuthLayout from "./layout/AuthLayout";
-// import RootLayout, {rootLoader} from "./layout/RootLayout";
 //AuthPages
 import Login from "./pages/Login/LoginPage";
 import ForgotPass from "./pages/Login/ForgotPass";
