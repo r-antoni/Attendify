@@ -2,7 +2,7 @@ import InputButton from "./reuseable/InputButton";
 import InputText from "./reuseable/InputText";
 import Button from "./reuseable/Button";
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -39,14 +39,8 @@ const LoginForm = () => {
           <input className="rounded" type="checkbox" /> <span>Remember me</span>
         </div>
         <Button type="submit">Sign In</Button>
-        <a className="text-slate-500 text-xs font-normal" href="/">
-          Forgot Password ?
-        </a>
         <p className="text-sm">
-          Dont have an account?
-          <a className="text-blue-400" href="/">
-            Register Here
-          </a>
+          Don't have an account ? <Link className="text-secondary" to="/register">Register Here</Link>
         </p>
       </div>
     </form>

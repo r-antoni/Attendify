@@ -13,7 +13,7 @@ export default {
         title: "#012970",
       },
       width: {
-        112: "28rem",
+        88: "22.5rem"
       },
     },
   },

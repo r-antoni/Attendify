@@ -4,7 +4,6 @@ import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
 //AuthPages
 import Login from "./pages/Login/LoginPage";
-import ForgotPass from "./pages/Login/ForgotPass";
 import Register from "./pages/Register/RegisterPage";
 import Verification from "./pages/Register/Verification";
 //Pages
@@ -21,22 +20,15 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
-        children: [
-          {
-            path: "identify",
-            element: <ForgotPass />,
-          },
-        ],
+          
       },
       {
         path: "register",
         element: <Register />,
-        children: [
-          {
-            path: "verification",
-            element: <Verification />,
-          },
-        ],
+      },
+      {
+        path: "verification",
+        element: <Verification />,
       },
     ],
   },

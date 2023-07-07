@@ -1,22 +1,6 @@
-import attendanceReports from "../assets/json/attendanceReports.json";
-import dashboardData from "../assets/json/dashboardData.json";
 import {Breadcrumb} from "flowbite-react";
 import {Card} from "flowbite-react";
-import {
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  PolarGrid,
-  Radar,
-  RadarChart,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { ReportLineChart, ReportRadarChart } from "../components/Charts";
 
 const Dashboard = () => {
   return (
@@ -120,31 +104,7 @@ const Dashboard = () => {
                 <h2 className="text-secondary text-xl">
                   Reports <span className="text-sm text-slate-300">/Today</span>
                 </h2>
-                <ResponsiveContainer width="100%" aspect={2}>
-                  <LineChart
-                    width={500}
-                    height={300}
-                    data={dashboardData}
-                    margin={{
-                      top: 5,
-                      right: 30,
-                      left: 20,
-                      bottom: 5,
-                    }}
-                  >
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Line
-                      type="monotone"
-                      dataKey="pv"
-                      stroke="#8884d8"
-                      activeDot={{r: 8}}
-                    />
-                    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                  </LineChart>
-                </ResponsiveContainer>
+                <ReportLineChart />
               </Card>
             </div>
           </div>
@@ -155,25 +115,7 @@ const Dashboard = () => {
               Attendance Report{" "}
               <span className="text-sm text-slate-300">| This Month</span>
             </h2>
-            <ResponsiveContainer width="100%" aspect={1}>
-              <RadarChart
-                cx="50%"
-                cy="50%"
-                outerRadius="80%"
-                data={attendanceReports}
-              >
-                <PolarGrid />
-                <PolarAngleAxis dataKey="subject" />
-                <PolarRadiusAxis />
-                <Radar
-                  name="Mike"
-                  dataKey="A"
-                  stroke="#8884d8"
-                  fill="#8884d8"
-                  fillOpacity={0.6}
-                />
-              </RadarChart>
-            </ResponsiveContainer>
+            <ReportRadarChart />
           </Card>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import BellIcon from "../assets/icons/notif.svg";
 import Profile from "../assets/icons/pic.svg";
 
