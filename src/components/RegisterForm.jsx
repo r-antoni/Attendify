@@ -12,7 +12,12 @@ const RegisterForm = () => {
             type="text"
             width="w-80"
           />
-          <InputText name="email" label="Email" type="email" width="w-80" />
+          <InputText 
+          name="email" 
+          label="Email" 
+          type="email" 
+          width="w-80" 
+          />
           <InputText
             name="password"
             label="Password"
@@ -28,7 +33,7 @@ const RegisterForm = () => {
         </div>
         <div className="flex flex-col items-start gap-4">
           <Button type="submit">Sign up</Button>
-          <p className="text-sm">have an account? <a className="text-blue-400" href="/login">Login Here</a></p>
+          <p className="text-sm">Have an account? <a className="text-blue-400" href="/login">Login Here</a></p>
         </div>
       </form>
     </div>
