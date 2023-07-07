@@ -1,11 +1,18 @@
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import AttendanceIcon from "../assets/icons/attendance.svg";
 import DashboardIcon from "../assets/icons/dashboard.svg";
 import ReportIcon from "../assets/icons/report.svg";
 import StudentIcon from "../assets/icons/student.svg";
 import LogoutIcon from "../assets/icons/logout.svg";
+import Auth from "../utils/Auth";
 
-const Sidebar = ({username}) => {
+const Sidebar = () => {
+  const navigate = useNavigate();
+
+	const handleLogout = () => {
+		Auth.logout(navigate);
+	};
+
   return (
     <div className="fixed h-full top-16 shadow-lg w-72">
       <div className="flex flex-col justify-between bg-white min-h-screen pl-6 pr-10 pt-6">
@@ -49,15 +56,15 @@ const Sidebar = ({username}) => {
 
         <div className="fixed bottom-10 ">
           <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">
-            {username}
+            Username
           </h3>
-          <NavLink
+          <button
             className="flex gap-2 pl-6 pr-10 py-2 text-title font-medium hover:bg-[#F6F9FF]"
-            to="/"
+            onClick={handleLogout}
           >
             <img src={LogoutIcon} />
             Logout
-          </NavLink>
+          </button>
         </div>
       </div>
     </div>
