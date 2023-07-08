@@ -1,6 +1,6 @@
-import React from "react"
 import { Breadcrumb } from "flowbite-react"
 import Button from "../components/reuseable/Button"
+import SelectOption from "../components/reuseable/SelectOption"
 
 const Report = () => {
   return (
@@ -12,39 +12,31 @@ const Report = () => {
           <Breadcrumb.Item href="#">Report</Breadcrumb.Item>
         </Breadcrumb>
       </div>
-      <div className="bg-[#ffffff] w-full py-6 px-4 flex flex-row gap-9">
-        <div className="relative">
-          <p className="absolute z-10 left-2 text-slate-400">Subject</p>
-          <select name="subject" id="subject" className=" border-2 border-slate-300 px-6 py-5 rounded w-40">
-            <option value="1">Advance java</option>
-            <option value="2">B</option>
-            <option value="3">C</option>
-          </select>
-        </div>
-        <div className="relative">
-          <p className="absolute z-10 left-2 text-slate-400">Section</p>
-          <select name="section" id="subject" className=" border-2 border-slate-300 px-6 py-5 rounded w-40">
-            <option value="1">A</option>
-            <option value="2">B</option>
-            <option value="3">C</option>
-          </select>
-        </div>
-        <div className="relative">
-          <p className="absolute z-10 left-2 text-slate-400 ">Month</p>
-          <select name="month" id="subject" className=" border-2 border-slate-300 px-6 py-5 rounded w-40">
-            <option value="1">Jan</option>
-            <option value="2">Feb</option>
-            <option value="3">March</option>
-          </select>
-        </div>
-        <div className="relative">
-          <p className="absolute z-10 left-2 text-slate-400 ">year</p>
-          <select name="years" id="subject" className=" border-2 border-slate-300 px-6 py-5 rounded w-40">
-            <option value="1">2023</option>
-            <option value="2">2022</option>
-            <option value="3">2021</option>
-          </select>
-        </div>
+      <div className="bg-[#ffffff] w-full py-6 px-4 flex flex-row gap-9 rounded-sm">
+        <SelectOption
+          title="Subject"
+          option1="Advance Java"
+          option2="A"
+          option3="B"
+        />
+        <SelectOption
+          title="Section"
+          option1="A"
+          option2="B"
+          option3="C"
+        />
+        <SelectOption
+          title="Month"
+          option1="Jan"
+          option2="Feb"
+          option3="March"
+        />
+        <SelectOption
+          title="year"
+          option1="2023"
+          option2="2022"
+          option3="2024"
+        />
         <div className="relative mt-6">
           <Button type="submit">Generate Report</Button>
         </div>
