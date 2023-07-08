@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Private & Protected Route
 import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
@@ -8,6 +8,7 @@ import Register from "./pages/Register/RegisterPage";
 import Verification from "./pages/Register/Verification";
 //Pages
 import Attendance from "./pages/Attendance";
+import AttendanceSheet from "./pages/AttendanceSheet";
 import Dashboard from "./pages/Dashboard";
 import Report from "./pages/Report";
 import Students from "./pages/Students";
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
-          
+
       },
       {
         path: "register",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "attendance",
         element: <Attendance />,
+      },
+      {
+        path: "attendance-sheet",
+        element: <AttendanceSheet />,
       },
       {
         path: "dashboard",

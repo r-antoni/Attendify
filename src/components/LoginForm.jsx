@@ -6,13 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const navigate = useNavigate();
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		const formData = new FormData(e.target);
-		const userData = Object.entries(formData);
-		Cookies.set("token", userData.username);
-		navigate("/dashboard");
-	};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const userData = Object.entries(formData);
+    Cookies.set("token", userData.username);
+    navigate("/dashboard");
+  };
 
   return (
     <form className="flex flex-col gap-10 justify-center min-h-screen px-20" onSubmit={handleSubmit}>
