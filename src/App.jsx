@@ -14,11 +14,10 @@ import Students from "./pages/Students";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <ProtectedRoute />,
     children: [
       {
-        path: "login",
+        index:true,
         element: <Login />,
 
       },
@@ -29,7 +28,6 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/",
     element: <PrivateRoute />,
     children: [
       {

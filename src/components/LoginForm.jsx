@@ -8,9 +8,14 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const userData = Object.entries(formData);
-    Cookies.set("token", userData.username);
+    const userData = {
+      username: e.target.username.value,
+      password: e.target.password.value,
+      role: "Admin"
+    }
+    Cookies.set("username", userData.username);
+    Cookies.set("password", btoa(userData.password));
+    Cookies.set("role", userData.role);
     navigate("/dashboard");
   };
 
@@ -36,7 +41,7 @@ const LoginForm = () => {
       </div>
       <div className="flex flex-col items-start gap-4">
         <div className="flex items-center text-sm gap-2">
-          <input className="rounded" type="checkbox" /> <span>Remember me</span>
+          <input className="rounded" type="checkbox" name="remember"/> <span>Remember me</span>
         </div>
         <Button type="submit">Sign In</Button>
         <p className="text-sm">

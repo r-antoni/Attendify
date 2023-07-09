@@ -1,7 +1,9 @@
+import Cookies from "js-cookie";
 import BellIcon from "../assets/icons/notif.svg";
 import Profile from "../assets/icons/pic.svg";
 
 const Navbar = ({visibility}) => {
+  const userName = Cookies.get("username")
   return (
     <div className="fixed w-full z-10 bg-white">
       <div className="flex justify-between items-center h-16 px-20 py-4 shadow-md">
@@ -10,7 +12,7 @@ const Navbar = ({visibility}) => {
           <img src={BellIcon} />
           <div className="flex gap-2 items-center">
             <img src={Profile} />
-            <div className="font-medium">Username</div>
+            <div className="font-medium">{userName}</div>
           </div>
         </div>
       </div>
