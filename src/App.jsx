@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
 //AuthPages
-import Login from "./pages/Login/LoginPage";
-import Register from "./pages/Register/RegisterPage";
+import Login from "./pages/LoginPage";
+import Register from "./pages/RegisterPage";
 //Pages
 import Attendance from "./pages/Attendance";
 import AttendanceSheet from "./pages/AttendanceSheet";
