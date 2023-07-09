@@ -1,5 +1,5 @@
-import LoginForm from "../../components/LoginForm";
-import LoginText from "../../components/LoginText";
+import LoginForm from "../components/LoginForm";
+import LoginText from "../components/LoginText";
 
 const Login = () => {
   return (

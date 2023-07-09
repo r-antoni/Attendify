@@ -5,7 +5,6 @@ import ProtectedRoute from "./router/ProtectedRoutes";
 //AuthPages
 import Login from "./pages/Login/LoginPage";
 import Register from "./pages/Register/RegisterPage";
-import Verification from "./pages/Register/Verification";
 //Pages
 import Attendance from "./pages/Attendance";
 import AttendanceSheet from "./pages/AttendanceSheet";
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
-      },
-      {
-        path: "verification",
-        element: <Verification />,
       },
     ],
   },
