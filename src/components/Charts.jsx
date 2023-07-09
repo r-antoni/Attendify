@@ -38,7 +38,7 @@ export const ReportRadarChart = () => {
             <RadarChart
                 cx="50%"
                 cy="50%"
-                outerRadius="80%"
+                outerRadius="60%"
                 data={attendanceReports}
             >
                 <PolarGrid />
@@ -48,8 +48,8 @@ export const ReportRadarChart = () => {
                     name="Mike"
                     dataKey="A"
                     stroke="#8884d8"
-                    fill="#8884d8"
-                    fillOpacity={0.6}
+                    fill="#4154F1"
+                    fillOpacity={0.8}
                 />
             </RadarChart>
         </ResponsiveContainer>
