@@ -2,10 +2,11 @@ import Cookies from "js-cookie";
 
 const Auth = {
 	authenticated: () => {
-		return Cookies.get("token");
+		return Cookies.get("username");
 	},
 	logout: (navigate) => {
-		Cookies.remove("token");
+		Cookies.remove("username");
+		Cookies.remove("password")
 		navigate("/login");
 	},
 };

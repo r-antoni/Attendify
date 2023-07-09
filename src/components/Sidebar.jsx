@@ -5,6 +5,7 @@ import ReportIcon from "../assets/icons/report.svg";
 import StudentIcon from "../assets/icons/student.svg";
 import LogoutIcon from "../assets/icons/logout.svg";
 import Auth from "../utils/Auth";
+import Cookies from "js-cookie";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -12,6 +13,8 @@ const Sidebar = () => {
 	const handleLogout = () => {
 		Auth.logout(navigate);
 	};
+
+  const userName = Cookies.get("username")
 
   return (
     <div className="fixed h-full top-16 shadow-lg w-72">
@@ -56,7 +59,7 @@ const Sidebar = () => {
 
         <div className="fixed bottom-10 ">
           <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">
-            Username
+            {userName}
           </h3>
           <button
             className="flex gap-2 pl-6 pr-10 py-2 text-title font-medium hover:bg-[#F6F9FF]"
