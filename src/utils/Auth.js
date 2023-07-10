@@ -6,8 +6,9 @@ const Auth = {
 	},
 	logout: (navigate) => {
 		Cookies.remove("username");
-		Cookies.remove("password")
-		navigate("/login");
+		Cookies.remove("password");
+		Cookies.remove("role")
+		navigate("/");
 	},
 };
 

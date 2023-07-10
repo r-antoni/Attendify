@@ -2,7 +2,6 @@ import { Breadcrumb, Card, Table } from "flowbite-react"
 import SelectOption from "../components/reuseable/SelectOption";
 import Button from "../components/reuseable/Button";
 import absenceData from "../assets/json/absenceRecords.json";
-import { Link } from "react-router-dom";
 
 const Attendance = () => {
   return (
