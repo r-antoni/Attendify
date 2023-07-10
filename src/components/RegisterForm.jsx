@@ -38,7 +38,7 @@ const RegisterForm = () => {
         </div>
           <Button type="submit">Sign up</Button>
           <p className="text-sm">
-            Have an account ? <Link className="text-secondary" to="/login">Login Here</Link>
+            Have an account ? <Link className="text-secondary" to="/">Login Here</Link>
           </p>
         </div>
       </form>
