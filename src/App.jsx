@@ -7,7 +7,6 @@ import Login from "./pages/LoginPage";
 import Register from "./pages/RegisterPage";
 //Pages
 import Attendance from "./pages/Attendance";
-import AttendanceSheet from "./pages/AttendanceSheet";
 import Dashboard from "./pages/Dashboard";
 import Report from "./pages/Report";
 import Students from "./pages/Students";
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
       {
         path: "attendance",
         element: <Attendance />,
-      },
-      {
-        path: "attendance-sheet",
-        element: <AttendanceSheet />,
       },
       {
         path: "dashboard",
