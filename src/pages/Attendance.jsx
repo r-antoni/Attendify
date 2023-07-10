@@ -5,8 +5,8 @@ import absenceData from "../assets/json/absenceRecords.json";
 import { Link } from "react-router-dom";
 
 const Attendance = () => {
-  return (
-    <div>
+    return (
+        <div>
             <div className="flex-col gap-3 mb-9">
                 <h2 className="text-3xl text-secondary">Attendance</h2>
                 <Breadcrumb>
@@ -62,7 +62,7 @@ const Attendance = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 };
 
 export default Attendance;
