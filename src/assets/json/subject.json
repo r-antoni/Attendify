@@ -1,0 +1,34 @@
+[
+  {
+    "no": "1",
+    "subject_name": "C Programming",
+    "course": "BIT",
+    "semester": "First",
+    "assigned_teacher": "Manag Lama",
+    "action": "❎✅"
+  },
+  {
+    "no": "1",
+    "subject_name": "Digital Logic",
+    "course": "BIT",
+    "semester": "First",
+    "assigned_teacher": "Prakash Rai",
+    "action": "❎✅"
+  },
+  {
+    "no": "1",
+    "subject_name": "OOP",
+    "course": "BIT",
+    "semester": "First",
+    "assigned_teacher": "Manag Lama",
+    "action": "❎✅"
+  },
+  {
+    "no": "1",
+    "subject_name": "C Programming",
+    "course": "BIT",
+    "semester": "Second",
+    "assigned_teacher": "-",
+    "action": ""
+  }
+]

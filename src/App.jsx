@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 //Private & Protected Route
 import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
@@ -10,6 +10,9 @@ import Attendance from "./pages/Attendance";
 import Dashboard from "./pages/Dashboard";
 import Report from "./pages/Report";
 import Students from "./pages/Students";
+import Absence from "./pages/Absence";
+import Subject from "./pages/Subject";
+import SubjectAdd from "./pages/SubjectAdd";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +21,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Login />,
-
       },
       {
         path: "register",
@@ -44,6 +46,18 @@ const router = createBrowserRouter([
       {
         path: "students",
         element: <Students />,
+      },
+      {
+        path: "absence",
+        element: <Absence />,
+      },
+      {
+        path: "subject",
+        element: <Subject />,
+      },
+      {
+        path: "subjectadd",
+        element: <SubjectAdd />,
       },
     ],
   },

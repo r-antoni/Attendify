@@ -1,0 +1,20 @@
+[
+  {
+    "no": "1",
+    "student_name": "Maria",
+    "course": "BICT",
+    "semester": "First",
+    "absence_reason": "Sick",
+    "absence_for": "1 day",
+    "action": "✅❎"
+  },
+  {
+    "no": "1",
+    "student_name": "Maria",
+    "course": "BICT",
+    "semester": "First",
+    "absence_reason": "Sick",
+    "absence_for": "1 day",
+    "action": "✅❎"
+  }
+]
