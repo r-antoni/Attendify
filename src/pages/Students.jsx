@@ -48,7 +48,7 @@ const Student = () => {
           </select>
         </div>
         <div className="relative mx-2">
-          <Button type="submit px-2 py-2">Generate Sheet</Button>
+          <Button type="submit px-2 py-2 bg-info">Generate Sheet</Button>
         </div>
       </div>
         </Card>
