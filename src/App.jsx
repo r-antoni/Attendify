@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Private & Protected Route
 import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
@@ -13,6 +13,8 @@ import Students from "./pages/Students";
 import Absence from "./pages/Absence";
 import Subject from "./pages/Subject";
 import SubjectAdd from "./pages/SubjectAdd";
+import TeacherAdd from "./pages/TeacherAdd";
+import Teacher from "./pages/Teacher";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: "subjectadd",
         element: <SubjectAdd />,
+      },
+      {
+        path: "teacher",
+        element: <Teacher />,
+      },
+      {
+        path: "teacher-add",
+        element: <TeacherAdd />,
       },
     ],
   },
