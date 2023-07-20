@@ -10,25 +10,21 @@ const RegisterForm = () => {
             name="username"
             label="Username"
             type="text"
-            width="w-88"
           />
           <InputText
             name="email"
             label="Email"
             type="email"
-            width="w-88"
           />
           <InputText
             name="password"
             label="Password"
             type="password"
-            width="w-88"
           />
           <InputText
             name="repeatPassword"
             label="Repeat Password"
             type="password"
-            width="w-88"
           />
         </div>
         

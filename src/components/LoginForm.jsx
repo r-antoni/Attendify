@@ -1,4 +1,3 @@
-import InputButton from "./reuseable/InputButton";
 import InputText from "./reuseable/InputText";
 import Button from "./reuseable/Button";
 import Cookies from "js-cookie";
@@ -11,30 +10,18 @@ const LoginForm = () => {
     const userData = {
       username: e.target.username.value,
       password: e.target.password.value,
+      remember: e.target.remember.checked,
       role: "Admin"
     }
-    Cookies.set("username", userData.username);
-    Cookies.set("password", btoa(userData.password));
-    Cookies.set("role", userData.role);
+    const expire = (userData.remember) ? {expires: 30} : {}
+    Cookies.set("username", userData.username, expire);
+    Cookies.set("password", btoa(userData.password),expire);
+    Cookies.set("role", userData.role, expire);
     navigate("/dashboard");
   };
 
   return (
-    <form className="flex flex-col gap-10 justify-center min-h-screen px-20" onSubmit={handleSubmit}>
-      <div className="flex gap-10">
-        <InputButton
-          name="Teacher"
-          textcolor="text-secondary"
-          background="bg-transparent"
-          border="border-[1px] border-secondary"
-        />
-        <InputButton
-          name="Admin"
-          textcolor="text-secondary"
-          background="bg-transparent"
-          border="border-[1px] border-secondary"
-        />
-      </div>
+    <form className="flex flex-col gap-10 justify-center min-h-screen  px-20" onSubmit={handleSubmit}>
       <div className="flex flex-col gap-6">
         <InputText name="username" label="Username" type="text" />
         <InputText name="password" label="Password" type="password" />

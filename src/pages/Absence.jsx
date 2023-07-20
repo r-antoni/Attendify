@@ -6,4 +6,4 @@ const Absence = () => {
   )
 }
 
-export default Absence
+export default Absence;

@@ -10,6 +10,10 @@ import Attendance from "./pages/Attendance";
 import Dashboard from "./pages/Dashboard";
 import Report from "./pages/Report";
 import Students from "./pages/Students";
+import Absence from "./pages/Absence";
+import Teacher from "./pages/Teacher"
+import Subject from "./pages/Subject"
+import AbsentApp from "./pages/AbsentApp"
 
 const router = createBrowserRouter([
   {
@@ -45,8 +49,28 @@ const router = createBrowserRouter([
         path: "students",
         element: <Students />,
       },
+      {
+        path: "absence",
+        element: <Absence />
+      },
+      {
+        path: "teacher",
+        element: <Teacher />
+      },
+      {
+        path: "subject",
+        element: <Subject />
+      },
+      {
+        path: "formsubmission",
+        element: <AbsentApp />
+      },
     ],
   },
+  {
+    path: "*",
+    element: <Error />
+  }
 ]);
 
 function App() {
