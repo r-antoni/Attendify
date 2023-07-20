@@ -10,6 +10,10 @@ const Auth = {
 		Cookies.remove("role")
 		navigate("/");
 	},
+	adminRole: () => {
+		const role = Cookies.get("role");
+		return role === "Admin";
+	},
 };
 
 export default Auth;

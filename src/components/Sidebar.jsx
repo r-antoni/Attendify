@@ -4,6 +4,9 @@ import DashboardIcon from "../assets/icons/dashboard.svg";
 import ReportIcon from "../assets/icons/report.svg";
 import StudentIcon from "../assets/icons/student.svg";
 import LogoutIcon from "../assets/icons/logout.svg";
+import AbsentIcon from "../assets/icons/absentapp.svg";
+import AbsenceIcon from "../assets/icons/absence.svg";
+import SubjectIcon from "../assets/icons/subject.svg";
 import Auth from "../utils/Auth";
 import Cookies from "js-cookie";
 
@@ -39,6 +42,12 @@ const Sidebar = () => {
             <img src={DashboardIcon} />
             Dashboard
           </NavLink>
+          {Auth.adminRole() && (
+            <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/absence">
+              <img src={AbsenceIcon} />
+              Absence
+            </NavLink>
+          )}
           <NavLink
             className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]"
             to="/report"
@@ -48,6 +57,12 @@ const Sidebar = () => {
           </NavLink>
 
           <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Manage</h3>
+          {Auth.adminRole() && (
+            <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/teacher">
+              <img src={AbsentIcon} />
+              Teachers
+            </NavLink>
+          )}
           <NavLink
             className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]"
             to="/students"
@@ -55,6 +70,12 @@ const Sidebar = () => {
             <img src={StudentIcon} />
             Students
           </NavLink>
+          {Auth.adminRole() && (
+            <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/subject">
+              <img src={SubjectIcon} />
+              Subjects
+            </NavLink>
+          )}
         </div>
 
         <div className="fixed bottom-10 ">

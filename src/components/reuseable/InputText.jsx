@@ -1,6 +1,6 @@
-const Input = ({name, label, type, width}) => {
+const Input = ({name, label, type}) => {
   return (
-    <div className={`flex flex-col gap-2 text-sm ${width}`}>
+    <div className={`flex flex-col gap-2 text-sm w-88`}>
       <label className="block text-title font-normal" htmlFor={name}>
         {label}
       </label>

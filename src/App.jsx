@@ -11,10 +11,12 @@ import Dashboard from "./pages/Dashboard";
 import Report from "./pages/Report";
 import Students from "./pages/Students";
 import Absence from "./pages/Absence";
-import Subject from "./pages/Subject";
+import Teacher from "./pages/Teacher"
+import Subject from "./pages/Subject"
+import AbsentApp from "./pages/AbsentApp";
 import SubjectAdd from "./pages/SubjectAdd";
 import TeacherAdd from "./pages/TeacherAdd";
-import Teacher from "./pages/Teacher";
+
 
 const router = createBrowserRouter([
   {
@@ -51,19 +53,24 @@ const router = createBrowserRouter([
       },
       {
         path: "absence",
-        element: <Absence />,
-      },
-      {
-        path: "subject",
-        element: <Subject />,
-      },
-      {
-        path: "subjectadd",
-        element: <SubjectAdd />,
+        element: <Absence />
       },
       {
         path: "teacher",
-        element: <Teacher />,
+        element: <Teacher />
+      },
+      {
+        path: "subject",
+        element: <Subject />
+      },
+      {
+        path: "formsubmission",
+        element: <AbsentApp />
+      },
+      
+      {
+        path: "subjectadd",
+        element: <SubjectAdd />,
       },
       {
         path: "teacher-add",
@@ -71,6 +78,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "*",
+    element: <Error />
+  }
 ]);
 
 function App() {
