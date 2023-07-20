@@ -13,16 +13,18 @@ import Students from "./pages/Students";
 import Absence from "./pages/Absence";
 import Teacher from "./pages/Teacher"
 import Subject from "./pages/Subject"
-import AbsentApp from "./pages/AbsentApp"
+import AbsentApp from "./pages/AbsentApp";
+import SubjectAdd from "./pages/SubjectAdd";
+import TeacherAdd from "./pages/TeacherAdd";
+
 
 const router = createBrowserRouter([
   {
     element: <ProtectedRoute />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Login />,
-
       },
       {
         path: "register",
@@ -64,6 +66,15 @@ const router = createBrowserRouter([
       {
         path: "formsubmission",
         element: <AbsentApp />
+      },
+      
+      {
+        path: "subjectadd",
+        element: <SubjectAdd />,
+      },
+      {
+        path: "teacher-add",
+        element: <TeacherAdd />,
       },
     ],
   },
