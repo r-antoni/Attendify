@@ -5,13 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { getItems } from "../reducers/AttendanceSlice"
 
 const Attendance = () => {
-    const { items, pending } = useSelector((state) => state.attedance);
+    const { items, pending, active } = useSelector((state) => state.attendance);
 
     const dispatch = useDispatch();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         dispatch(getItems());
     };
 
@@ -22,21 +21,23 @@ const Attendance = () => {
                 <Breadcrumb>
                     <Breadcrumb.Item>Track</Breadcrumb.Item>
                     <Breadcrumb.Item href="#">Attendance</Breadcrumb.Item>
-                    <Breadcrumb.Item href="#">Attendance sheet</Breadcrumb.Item>
+                    <Breadcrumb.Item href="#" className={active ? "active" : "hidden"}>Attendance sheet</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
             <div className="flex flex-col gap-10">
-                <form onSubmit={handleSubmit} className="bg-[#ffffff] w-full py-6 px-4 flex flex-row gap-9 rounded-sm">
-                    <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
-                    <SelectOption title="Section" option1="A" option2="B" option3="C" />
-                    <SelectOption title="Date" option1="2023/03/15" option2="2023/03/16" option3="2023/03/17" />
-                    <div className="relative mt-6">
-                        <Button type="submit">{pending ? "Loading" : "Generate Sheet"}</Button>
-                    </div>
-                </form>
+                <Card className="pb-3">
+                    <form onSubmit={handleSubmit} className="flex flex-row items-center gap-20 ml-20 mt-6">
+                        <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
+                        <SelectOption title="Section" option1="A" option2="B" option3="C" />
+                        <SelectOption title="Date" option1="2023/03/15" option2="2023/03/16" option3="2023/03/17" />
+                        <div className="flex-1">
+                            <Button type="submit">{pending ? "Loading" : "Generate Sheet"}</Button>
+                        </div>
+                    </form>
+                </Card>
                 <div>
-                    <Card className="flex-1">
-                        <h1 className="text-2xl font-semibold text-title">Attendance Sheet</h1>
+                    <Card className={active ? "flex" : "hidden"}>
+                        <h1 className="text-2xl px-5 py-2 font-semibold text-title">Attendance Sheet</h1>
                         <div className="max-h-[500px] overflow-y-scroll">
                             <Table className="!w-full">
                                 <Table.Head>
