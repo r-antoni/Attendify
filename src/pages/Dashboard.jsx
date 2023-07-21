@@ -1,7 +1,9 @@
-import {Card} from "flowbite-react";
-import {ReportLineChart, ReportRadarChart} from "../components/Charts";
-import EmptyIcon from "../assets/icons/div.svg";
+import { Card, Timeline } from "flowbite-react";
+import { ReportLineChart, ReportRadarChart } from "../components/Charts";
+import { RiMapPinTimeLine } from 'react-icons/ri'
+import Auth from "../utils/Auth"
 import Breadcrumb from "../components/Breadcrumb";
+import EmptyIcon from "../assets/icons/div.svg";
 
 const Dashboard = () => {
   const model = [
@@ -18,7 +20,7 @@ const Dashboard = () => {
     <div className="flex flex-col gap-10">
       <div className="flex-col gap-3">
         <h2 className="text-3xl text-secondary">Dashboard</h2>
-        <Breadcrumb model={model}/>
+        <Breadcrumb model={model} />
       </div>
       <main className="flex gap-10">
         <div className="flex flex-col gap-10">
@@ -68,17 +70,58 @@ const Dashboard = () => {
           </div>
           <div>
             <Card>
-              <h2 className="text-secondary text-xl">
+              <h2 className="text-secondary text-xl px-5 py-2">
                 Reports <span className="text-sm text-slate-300">| Today</span>
               </h2>
               <ReportLineChart />
             </Card>
           </div>
         </div>
-        <div>
-          {}
+        <div className="flex flex-col gap-10">
+          {Auth.adminRole() && (
+            <Card className="w-96 px-5">
+              <h2 className="text-secondary text-xl">
+                Recent Activities <span className="text-sm text-slate-300">| Today</span>
+              </h2>
+              <Timeline>
+                <Timeline.Item>
+                  <Timeline.Point icon={RiMapPinTimeLine} />
+                  <Timeline.Content>
+                    <Timeline.Time>
+                      February 2022
+                    </Timeline.Time>
+                    <Timeline.Title>
+                      Application UI code in Tailwind
+                    </Timeline.Title>
+                  </Timeline.Content>
+                </Timeline.Item>
+                <Timeline.Item>
+                  <Timeline.Point icon={RiMapPinTimeLine} />
+                  <Timeline.Content>
+                    <Timeline.Time>
+                      March 2022
+                    </Timeline.Time>
+                    <Timeline.Title>
+                      Marketing UI design in Figma
+                    </Timeline.Title>
+                  </Timeline.Content>
+                </Timeline.Item>
+                <Timeline.Item>
+                  <Timeline.Point icon={RiMapPinTimeLine} />
+                  <Timeline.Content>
+                    <Timeline.Time>
+                      April 2022
+                    </Timeline.Time>
+                    <Timeline.Title>
+                      E-Commerce UI code in Tailwind
+                    </Timeline.Title>
+                  </Timeline.Content>
+                </Timeline.Item>
+              </Timeline>
+            </Card>
+          )}
           <Card>
-            <h2 className="text-secondary text-xl">
+            <h2 className="text-secondary text-xl px-5 ">
               Attendance Report <span className="text-sm text-slate-300">| This Month</span>
             </h2>
             <ReportRadarChart />

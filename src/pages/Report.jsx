@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getItems } from "../reducers/ReportSlice";
 
 const Report = () => {
-  const { items, pending, active } = useSelector((state) => state.attendance);
+  const { items, pending, active } = useSelector((state) => state.report);
 
   const dispatch = useDispatch();
 
