@@ -1,12 +1,12 @@
-import { Card, Table } from "flowbite-react";
+import {Card, Table} from "flowbite-react";
 import SelectOption from "../components/SelectOption";
 import Button from "../components/Button";
-import { useDispatch, useSelector } from "react-redux";
-import { getItems } from "../reducers/AttendanceSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {getItems} from "../reducers/AttendanceSlice";
 import Breadcrumb from "../components/Breadcrumb";
 
 const Attendance = () => {
-  const { items, pending, active } = useSelector((state) => state.attendance);
+  const {items, pending, active} = useSelector((state) => state.attendance);
 
   const dispatch = useDispatch();
 
@@ -27,7 +27,7 @@ const Attendance = () => {
 
   return (
     <div>
-      <div className="flex-col gap-3 mb-9">
+      <div className="flex flex-col gap-3 mb-9">
         <h2 className="text-3xl text-secondary">Attendance</h2>
         <Breadcrumb model={model} />
       </div>

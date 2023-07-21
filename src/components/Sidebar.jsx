@@ -1,5 +1,5 @@
 //React Router
-import { NavLink, useNavigate } from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 //Auth
 import Auth from "../utils/Auth";
 //Cookies
@@ -49,7 +49,8 @@ const Sidebar = () => {
             <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/reports">
               <img src={ReportIcon} />
               Reports
-            </NavLink>)}
+            </NavLink>
+          )}
           {Auth.adminRole() && (
             <>
               <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Manage</h3>
@@ -61,12 +62,13 @@ const Sidebar = () => {
           )}
           {(Auth.adminRole() || Auth.teacherRole()) && (
             <>
-              {Auth.teacherRole() && (<h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Manage</h3>)}
+              {Auth.teacherRole() && <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Manage</h3>}
               <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/students">
                 <img src={StudentIcon} />
                 Students
               </NavLink>
-            </>)}
+            </>
+          )}
           {Auth.adminRole() && (
             <>
               <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/subjects">
@@ -89,7 +91,8 @@ const Sidebar = () => {
           <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">{username}</h3>
           <button
             className="flex gap-2 pl-6 pr-10 py-2 text-title font-medium hover:bg-[#F6F9FF]"
-            onClick={handleLogout} >
+            onClick={handleLogout}
+          >
             <img src={LogoutIcon} />
             Logout
           </button>

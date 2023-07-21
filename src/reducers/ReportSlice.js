@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getItems = createAsyncThunk("attendance/getAttendance", async () => {
+export const getItems = createAsyncThunk("report/getReport", async () => {
   const {data} = await axios.get("https://64b9363379b7c9def6c0c250.mockapi.io/report");
   return data;
 });
@@ -13,7 +13,7 @@ const initialState = {
 };
 
 const reportSlice = createSlice({
-  name: "attendance",
+  name: "report",
   initialState,
   extraReducers: (builder) => {
     builder.addCase(getItems.pending, (state) => {

@@ -50,13 +50,19 @@ const router = createBrowserRouter([
         element: <PrivateRoute />,
         children: [
           {
-            path: "attendance",
-            element: <Attendance />,
-          },
-          {
             path: "dashboard",
             element: <Dashboard />,
           },
+        ],
+      },
+      {
+        element: <PrivateRoute roleRequired={"Admin" || "Teacher"} />,
+        children: [
+          {
+            path: "attendance",
+            element: <Attendance />,
+          },
+
           {
             path: "reports",
             element: <Report />,
@@ -97,13 +103,13 @@ const router = createBrowserRouter([
         children: [
           {
             path: "absent-app",
-            element: <AbsentApp />
+            element: <AbsentApp />,
           },
           {
             path: "form-submission",
-            element: <AbsentAppAdd />
-          }
-        ]
+            element: <AbsentAppAdd />,
+          },
+        ],
       },
     ],
   },
