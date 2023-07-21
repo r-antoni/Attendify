@@ -19,7 +19,6 @@ import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import Report from "./pages/Report";
 import Students from "./pages/Students";
-import StudentsAdd from "./pages/StudentsAdd";
 import Subject from "./pages/Subject";
 import SubjectAdd from "./pages/SubjectAdd";
 import Teacher from "./pages/Teacher";
@@ -89,10 +88,6 @@ const router = createBrowserRouter([
                 path: "add-teacher",
                 element: <TeacherAdd />,
               },
-              {
-                path: "add-student",
-                element: <StudentsAdd />
-              }
             ],
           },
         ],

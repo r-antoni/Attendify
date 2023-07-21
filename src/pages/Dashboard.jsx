@@ -30,7 +30,7 @@ const Dashboard = () => {
               <div className={`flex px-5`}>
                 <img src={EmptyIcon} />
                 <div className="flex flex-col">
-                  <p className="text-xl text-[#4154F1] font-bold px-3">145</p>
+                  <p className="text-xl text-secondary font-bold px-3">145</p>
                   <p className="text-sm text-title font-bold px-3">
                     12% <span className="text-[#6C757D] font-normal">increase</span>
                   </p>
@@ -44,7 +44,7 @@ const Dashboard = () => {
               <div className={`flex px-5`}>
                 <img src={EmptyIcon} />
                 <div className="flex flex-col">
-                  <p className="text-xl text-[#4154F1] font-bold px-3">145</p>
+                  <p className="text-xl text-secondary font-bold px-3">145</p>
                   <p className="text-sm text-title font-bold px-3">
                     12% <span className="text-[#6C757D] font-normal">increase</span>
                   </p>
@@ -58,7 +58,7 @@ const Dashboard = () => {
               <div className={`flex px-5`}>
                 <img src={EmptyIcon} />
                 <div className="flex flex-col">
-                  <p className="text-xl text-[#4154F1] font-bold px-3">145</p>
+                  <p className="text-xl text-secondary font-bold px-3">145</p>
                   <p className="text-sm text-title font-bold px-3">
                     12% <span className="text-[#6C757D] font-normal">increase</span>
                   </p>
@@ -76,6 +76,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div>
+          {}
           <Card>
             <h2 className="text-secondary text-xl">
               Attendance Report <span className="text-sm text-slate-300">| This Month</span>
