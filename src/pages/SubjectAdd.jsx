@@ -15,14 +15,14 @@ const SubjectAdd = () => {
     },
     {
       title: "Add Subject",
-      path: "/add-subject"
-    }
+      path: "/add-subject",
+    },
   ];
   return (
     <div>
       <div className="flex-col gap-3 mb-9">
         <h2 className="text-3xl text-secondary">Subject</h2>
-        <Breadcrumb model={model}/>
+        <Breadcrumb model={model} />
       </div>
       <div className="w-1/2">
         <Card>

@@ -15,14 +15,14 @@ const TeacherAdd = () => {
     },
     {
       title: "Add Teacher",
-      path: "/add-teacher"
-    }
+      path: "/add-teacher",
+    },
   ];
   return (
     <div className="flex flex-col gap-10">
       <div className="flex-col gap-3">
         <h2 className="text-3xl text-secondary">Teacher</h2>
-        <Breadcrumb model={model}/>
+        <Breadcrumb model={model} />
       </div>
       <div className="w-[50%]">
         <Card>

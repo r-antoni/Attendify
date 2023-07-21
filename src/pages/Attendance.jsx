@@ -1,12 +1,12 @@
-import { Card, Table } from "flowbite-react";
+import {Card, Table} from "flowbite-react";
 import SelectOption from "../components/SelectOption";
 import Button from "../components/Button";
-import { useDispatch, useSelector } from "react-redux";
-import { getItems } from "../reducers/AttendanceSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {getItems} from "../reducers/AttendanceSlice";
 import Breadcrumb from "../components/Breadcrumb";
 
 const Attendance = () => {
-  const { items, pending, active } = useSelector((state) => state.attendance);
+  const {items, pending, active} = useSelector((state) => state.attendance);
 
   const dispatch = useDispatch();
 

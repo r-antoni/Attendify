@@ -1,4 +1,4 @@
-import { Card, Table} from "flowbite-react";
+import {Card, Table} from "flowbite-react";
 import teacherCurrent from "../assets/json/TeacherCurrent.json";
 import edit from "../assets/icons/edit.svg";
 import trash from "../assets/icons/trash.svg";
@@ -21,7 +21,7 @@ const Teacher = () => {
       <div className="flex justify-between gap-3 mb-9">
         <div>
           <h2 className="text-3xl text-secondary">Teachers</h2>
-          <Breadcrumb model={model}/>
+          <Breadcrumb model={model} />
         </div>
         <div>
           <Button>Add teacher</Button>

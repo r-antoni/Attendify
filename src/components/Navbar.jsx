@@ -2,15 +2,15 @@ import Cookies from "js-cookie";
 import Logo from "../assets/img/attendify.png";
 import BellIcon from "../assets/icons/notif.svg";
 import Profile from "../assets/icons/pic.svg";
-import { Card } from 'flowbite-react';
-import { useState } from "react";
+import {Card} from "flowbite-react";
+import {useState} from "react";
 
-const Navbar = ({ visibility }) => {
+const Navbar = ({visibility}) => {
   const username = Cookies.get("username");
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
   const handleClick = () => {
-    setActive(!active)
-  }
+    setActive(!active);
+  };
   return (
     <div className="fixed w-full z-10 bg-white">
       <div className="flex justify-between items-center h-16 px-20 py-4 shadow-md">
@@ -29,7 +29,11 @@ const Navbar = ({ visibility }) => {
           </div>
         </div>
       </div>
-      <Card className={`${active ? "flex" : "hidden"} absolute top-12 right-56 bg-white border w-1/3 min-h-[120px] transition-all`}>
+      <Card
+        className={`${
+          active ? "flex" : "hidden"
+        } absolute top-12 right-56 bg-white border w-1/3 min-h-[120px] transition-all`}
+      >
         <div className="flex items-center justify-center">Notification Box</div>
       </Card>
     </div>

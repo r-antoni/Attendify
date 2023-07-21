@@ -1,7 +1,7 @@
-import { Card, Timeline } from "flowbite-react";
-import { ReportLineChart, ReportRadarChart } from "../components/Charts";
-import { RiMapPinTimeLine } from 'react-icons/ri'
-import Auth from "../utils/Auth"
+import {Card, Timeline} from "flowbite-react";
+import {ReportLineChart, ReportRadarChart} from "../components/Charts";
+import {RiMapPinTimeLine} from "react-icons/ri";
+import Auth from "../utils/Auth";
 import Breadcrumb from "../components/Breadcrumb";
 import EmptyIcon from "../assets/icons/div.svg";
 
@@ -87,34 +87,22 @@ const Dashboard = () => {
                 <Timeline.Item>
                   <Timeline.Point icon={RiMapPinTimeLine} />
                   <Timeline.Content>
-                    <Timeline.Time>
-                      February 2022
-                    </Timeline.Time>
-                    <Timeline.Title>
-                      Application UI code in Tailwind
-                    </Timeline.Title>
+                    <Timeline.Time>February 2022</Timeline.Time>
+                    <Timeline.Title>Application UI code in Tailwind</Timeline.Title>
                   </Timeline.Content>
                 </Timeline.Item>
                 <Timeline.Item>
                   <Timeline.Point icon={RiMapPinTimeLine} />
                   <Timeline.Content>
-                    <Timeline.Time>
-                      March 2022
-                    </Timeline.Time>
-                    <Timeline.Title>
-                      Marketing UI design in Figma
-                    </Timeline.Title>
+                    <Timeline.Time>March 2022</Timeline.Time>
+                    <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
                   </Timeline.Content>
                 </Timeline.Item>
                 <Timeline.Item>
                   <Timeline.Point icon={RiMapPinTimeLine} />
                   <Timeline.Content>
-                    <Timeline.Time>
-                      April 2022
-                    </Timeline.Time>
-                    <Timeline.Title>
-                      E-Commerce UI code in Tailwind
-                    </Timeline.Title>
+                    <Timeline.Time>April 2022</Timeline.Time>
+                    <Timeline.Title>E-Commerce UI code in Tailwind</Timeline.Title>
                   </Timeline.Content>
                 </Timeline.Item>
               </Timeline>

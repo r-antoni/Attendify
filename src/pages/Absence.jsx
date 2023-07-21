@@ -17,7 +17,7 @@ const Absence = () => {
     <div>
       <div className="flex-col gap-3 mb-9">
         <h2 className="text-3xl text-secondary">Absence</h2>
-        <Breadcrumb model={model}/>
+        <Breadcrumb model={model} />
       </div>
       <div>
         <Card className="flex-1">
