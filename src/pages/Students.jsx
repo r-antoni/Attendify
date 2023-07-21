@@ -1,4 +1,4 @@
-import { Breadcrumb } from "flowbite-react"
+import { Breadcrumb, Card } from "flowbite-react"
 import SelectOption from "../components/reuseable/SelectOption";
 import Button from "../components/reuseable/Button";
 
@@ -12,7 +12,8 @@ const Student = () => {
           <Breadcrumb.Item href="#">Student</Breadcrumb.Item>
         </Breadcrumb>
       </div>
-      <div className="bg-[#ffffff] w-full py-6 px-4 flex flex-row gap-9 rounded-sm">
+      <Card className="pb-3">
+        <form className="flex flex-row items-center gap-20 ml-20 mt-8">
         <SelectOption
           title="Subject"
           option1="Advance Java"
@@ -32,15 +33,16 @@ const Student = () => {
           option3="March"
         />
         <SelectOption
-          title="year"
+          title="Year"
           option1="2023"
           option2="2022"
           option3="2024"
         />
-        <div className="relative mt-6">
+        <div className="">
           <Button type="submit">Generate Report</Button>
         </div>
-      </div>
+      </form>
+      </Card>
     </div>
   )
 };

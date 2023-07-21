@@ -23,7 +23,7 @@ const Teacher = () => {
 
       <div className="flex flex-col gap-10">
         <Card className="flex-1">
-          <h1 className="text-2xl font-semibold text-title">Attendance Sheet</h1>
+          <h1 className="text-2xl font-semibold text-title px-5 py-2">Attendance Sheet</h1>
           <Table className="!w-full">
             <Table.Head>
               <Table.HeadCell>#</Table.HeadCell>

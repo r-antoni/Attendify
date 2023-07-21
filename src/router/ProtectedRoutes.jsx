@@ -5,9 +5,7 @@ import AuthLayout from "../layout/AuthLayout";
 	export default function ProtectedRoute() {
         if (!Auth.authenticated()) {
             return (
-                <AuthLayout>
-                    <Outlet />;
-                </AuthLayout>
+                    <Outlet />
             );
         }
     
