@@ -19,7 +19,7 @@ const Sidebar = () => {
   const handleLogout = () => {
     Auth.logout(navigate);
   };
-  const userName = Cookies.get("username");
+  const username = Cookies.get("username");
 
   return (
     <div className="fixed h-full top-16 shadow-lg w-72">
@@ -86,11 +86,10 @@ const Sidebar = () => {
           )}
         </div>
         <div className="fixed bottom-10 ">
-          <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">{userName}</h3>
+          <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">{username}</h3>
           <button
             className="flex gap-2 pl-6 pr-10 py-2 text-title font-medium hover:bg-[#F6F9FF]"
-            onClick={handleLogout}
-          >
+            onClick={handleLogout} >
             <img src={LogoutIcon} />
             Logout
           </button>
