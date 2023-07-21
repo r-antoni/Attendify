@@ -1,17 +1,28 @@
-import {Breadcrumb, Card} from "flowbite-react";
-import React from "react";
+import {Card} from "flowbite-react";
 import InputText from "../components/InputText";
 import Button from "../components/Button";
+import Breadcrumb from "../components/Breadcrumb";
 
 const TeacherAdd = () => {
+  const model = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Teachers",
+      path: "/teacher",
+    },
+    {
+      title: "Add Teacher",
+      path: "/add-teacher"
+    }
+  ];
   return (
     <div className="flex flex-col gap-10">
       <div className="flex-col gap-3">
         <h2 className="text-3xl text-secondary">Teacher</h2>
-        <Breadcrumb>
-          <Breadcrumb.Item>Manage</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Teacher</Breadcrumb.Item>
-        </Breadcrumb>
+        <Breadcrumb model={model}/>
       </div>
       <div className="w-[50%]">
         <Card>

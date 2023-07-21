@@ -46,14 +46,14 @@ const Sidebar = () => {
             </NavLink>
           )}
           {(Auth.adminRole() || Auth.teacherRole()) && (
-            <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/report">
+            <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/reports">
               <img src={ReportIcon} />
-              Report
+              Reports
             </NavLink>)}
           {Auth.adminRole() && (
             <>
               <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Manage</h3>
-              <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/teacher">
+              <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/teachers">
                 <img src={AbsentIcon} />
                 Teachers
               </NavLink>
@@ -69,9 +69,9 @@ const Sidebar = () => {
             </>)}
           {Auth.adminRole() && (
             <>
-              <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/subject">
+              <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/subjects">
                 <img src={SubjectIcon} />
-                Subject
+                Subjects
               </NavLink>
             </>
           )}

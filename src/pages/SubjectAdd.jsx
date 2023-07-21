@@ -1,17 +1,28 @@
-import React from "react";
-import {Breadcrumb, Card, Table} from "flowbite-react";
+import {Card} from "flowbite-react";
 import InputText from "../components/InputText";
 import Button from "../components/Button";
+import Breadcrumb from "../components/Breadcrumb";
+
 const SubjectAdd = () => {
+  const model = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Subjects",
+      path: "/subjects",
+    },
+    {
+      title: "Add Subject",
+      path: "/add-subject"
+    }
+  ];
   return (
     <div>
       <div className="flex-col gap-3 mb-9">
         <h2 className="text-3xl text-secondary">Subject</h2>
-        <Breadcrumb>
-          <Breadcrumb.Item>Manage</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Subject</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Add Subject</Breadcrumb.Item>
-        </Breadcrumb>
+        <Breadcrumb model={model}/>
       </div>
       <div className="w-1/2">
         <Card>
