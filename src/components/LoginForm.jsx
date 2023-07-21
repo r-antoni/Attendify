@@ -1,7 +1,7 @@
-import InputText from "./reuseable/InputText";
-import Button from "./reuseable/Button";
+import InputText from "./InputText";
+import Button from "./Button";
 import Cookies from "js-cookie";
-import { Link, useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -11,11 +11,11 @@ const LoginForm = () => {
       username: e.target.username.value,
       password: e.target.password.value,
       remember: e.target.remember.checked,
-      role: "Admin"
-    }
-    const expire = (userData.remember) ? {expires: 30} : {}
+      role: "Student",
+    };
+    const expire = userData.remember && {expires: 30};
     Cookies.set("username", userData.username, expire);
-    Cookies.set("password", btoa(userData.password),expire);
+    Cookies.set("password", btoa(userData.password), expire);
     Cookies.set("role", userData.role, expire);
     navigate("/dashboard");
   };
@@ -28,11 +28,14 @@ const LoginForm = () => {
       </div>
       <div className="flex flex-col items-start gap-4">
         <div className="flex items-center text-sm gap-2">
-          <input className="rounded" type="checkbox" name="remember"/> <span>Remember me</span>
+          <input className="rounded" type="checkbox" name="remember" /> <span>Remember me</span>
         </div>
         <Button type="submit">Sign In</Button>
         <p className="text-sm">
-          Don't have an account ? <Link className="text-secondary" to="/register">Register Here</Link>
+          Don't have an account ?{" "}
+          <Link className="text-secondary" to="/register">
+            Register Here
+          </Link>
         </p>
       </div>
     </form>

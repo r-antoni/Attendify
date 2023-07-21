@@ -1,5 +1,5 @@
 //React Router
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 //Private & Protected Route
 import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
@@ -10,18 +10,20 @@ import RootLayout from "./layout/RootLayout";
 import Login from "./pages/LoginPage";
 import Register from "./pages/RegisterPage";
 //Pages
+import Absence from "./pages/Absence";
+import AbsentApp from "./pages/AbsentApp";
+import AbsentAppAdd from "./pages/AbsentAppAdd";
+import AccessDenied from "./pages/AccessDenied";
 import Attendance from "./pages/Attendance";
 import Dashboard from "./pages/Dashboard";
+import Error from "./pages/Error";
 import Report from "./pages/Report";
 import Students from "./pages/Students";
-import Absence from "./pages/Absence";
-import Teacher from "./pages/Teacher"
-import Subject from "./pages/Subject"
-import AbsentApp from "./pages/AbsentApp";
+import StudentsAdd from "./pages/StudentsAdd";
+import Subject from "./pages/Subject";
 import SubjectAdd from "./pages/SubjectAdd";
+import Teacher from "./pages/Teacher";
 import TeacherAdd from "./pages/TeacherAdd";
-import Error from "./pages/Error"
-import AccessDenied from "./pages/AccessDenied";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +42,7 @@ const router = createBrowserRouter([
           },
         ],
       },
-    ]
+    ],
   },
   {
     element: <RootLayout />,
@@ -57,7 +59,7 @@ const router = createBrowserRouter([
             element: <Dashboard />,
           },
           {
-            path: "report",
+            path: "reports",
             element: <Report />,
           },
           {
@@ -69,47 +71,55 @@ const router = createBrowserRouter([
             children: [
               {
                 path: "absence",
-                element: <Absence />
+                element: <Absence />,
               },
               {
-                path: "teacher",
-                element: <Teacher />
+                path: "teachers",
+                element: <Teacher />,
               },
               {
-                path: "subject",
-                element: <Subject />
+                path: "subjects",
+                element: <Subject />,
               },
               {
-                path: "subject-add",
+                path: "add-subject",
                 element: <SubjectAdd />,
               },
               {
-                path: "teacher-add",
+                path: "add-teacher",
                 element: <TeacherAdd />,
               },
-            ]
-          },
-          {
-            element: <PrivateRoute roleRequired="student" />,
-            children: [
               {
-                path: "formsubmission",
-                element: <AbsentApp />
-              },
-            ]
+                path: "add-student",
+                element: <StudentsAdd />
+              }
+            ],
           },
         ],
       },
-    ]
+      {
+        element: <PrivateRoute roleRequired="Student" />,
+        children: [
+          {
+            path: "absent-app",
+            element: <AbsentApp />
+          },
+          {
+            path: "form-submission",
+            element: <AbsentAppAdd />
+          }
+        ]
+      },
+    ],
   },
   {
     path: "*",
-    element: <Error />
+    element: <Error />,
   },
   {
     path: "denied",
-    element: <AccessDenied />
-  }
+    element: <AccessDenied />,
+  },
 ]);
 
 function App() {

@@ -1,15 +1,23 @@
-import React from "react";
-import {Breadcrumb, Card, Table} from "flowbite-react";
+import {Card, Table} from "flowbite-react";
 import absence from "../assets/json/absence.json";
+import Breadcrumb from "../components/Breadcrumb";
+
 const Absence = () => {
+  const model = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Absence",
+      path: "/absence",
+    },
+  ];
   return (
     <div>
       <div className="flex-col gap-3 mb-9">
         <h2 className="text-3xl text-secondary">Absence</h2>
-        <Breadcrumb>
-          <Breadcrumb.Item>Analyse</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Absence</Breadcrumb.Item>
-        </Breadcrumb>
+        <Breadcrumb model={model}/>
       </div>
       <div>
         <Card className="flex-1">
