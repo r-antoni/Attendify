@@ -1,6 +1,6 @@
 import React from "react";
 import {Breadcrumb, Card, Table} from "flowbite-react";
-import Button from "../components/reuseable/Button";
+import Button from "../components/Button";
 import subject from "../assets/json/subject.json";
 
 const Subject = () => {

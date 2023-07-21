@@ -1,14 +1,13 @@
 import Cookies from "js-cookie";
-import Logo from "../assets/img/attendify.png"
+import Logo from "../assets/img/attendify.png";
 import BellIcon from "../assets/icons/notif.svg";
 import Profile from "../assets/icons/pic.svg";
 
 const Navbar = ({visibility}) => {
-  const userName = Cookies.get("username")
+  const userName = Cookies.get("username");
   return (
     <div className="fixed w-full z-10 bg-white">
       <div className="flex justify-between items-center h-16 px-20 py-4 shadow-md">
-        
         <div className=" flex ga text-3xl text-title font-semibold">
           <img className="w-10 h-10 items-center" src={Logo} alt="attendify logo" />
           ttendify

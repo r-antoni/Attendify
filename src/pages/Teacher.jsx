@@ -1,9 +1,9 @@
-import { Breadcrumb, Card, Table } from 'flowbite-react'
-import React from 'react'
-import teacherCurrent from "../assets/json/TeacherCurrent.json"
-import edit from "../assets/icons/edit.svg"
-import trash from "../assets/icons/trash.svg"
-import Button from "../components/reuseable/Button"
+import {Breadcrumb, Card, Table} from "flowbite-react";
+import React from "react";
+import teacherCurrent from "../assets/json/TeacherCurrent.json";
+import edit from "../assets/icons/edit.svg";
+import trash from "../assets/icons/trash.svg";
+import Button from "../components/Button";
 
 const Teacher = () => {
   return (
@@ -43,7 +43,7 @@ const Teacher = () => {
                   <Table.Cell>{data.email}</Table.Cell>
                   <Table.Cell>{data.username}</Table.Cell>
                   <Table.Cell>{data.password}</Table.Cell>
-                  <Table.Cell className='flex cursor-pointer'>
+                  <Table.Cell className="flex cursor-pointer">
                     <img src={edit} />
                     <img src={trash} />
                   </Table.Cell>
@@ -54,7 +54,7 @@ const Teacher = () => {
         </Card>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Teacher
+export default Teacher;

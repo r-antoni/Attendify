@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AccessDenied = () => {
-  return (
-    <div>AccessDenied</div>
-  )
-}
+  return <div>AccessDenied</div>;
+};
 
-export default AccessDenied
+export default AccessDenied;

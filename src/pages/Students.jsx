@@ -1,6 +1,6 @@
-import { Breadcrumb, Card } from "flowbite-react"
-import SelectOption from "../components/reuseable/SelectOption";
-import Button from "../components/reuseable/Button";
+import {Breadcrumb, Card} from "flowbite-react";
+import SelectOption from "../components/SelectOption";
+import Button from "../components/Button";
 
 const Student = () => {
   return (
@@ -14,37 +14,17 @@ const Student = () => {
       </div>
       <Card className="pb-3">
         <form className="flex flex-row items-center gap-20 ml-20 mt-8">
-        <SelectOption
-          title="Subject"
-          option1="Advance Java"
-          option2="A"
-          option3="B"
-        />
-        <SelectOption
-          title="Section"
-          option1="A"
-          option2="B"
-          option3="C"
-        />
-        <SelectOption
-          title="Month"
-          option1="Jan"
-          option2="Feb"
-          option3="March"
-        />
-        <SelectOption
-          title="Year"
-          option1="2023"
-          option2="2022"
-          option3="2024"
-        />
-        <div className="">
-          <Button type="submit">Generate Report</Button>
-        </div>
-      </form>
+          <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
+          <SelectOption title="Section" option1="A" option2="B" option3="C" />
+          <SelectOption title="Month" option1="Jan" option2="Feb" option3="March" />
+          <SelectOption title="Year" option1="2023" option2="2022" option3="2024" />
+          <div className="">
+            <Button type="submit">Generate Report</Button>
+          </div>
+        </form>
       </Card>
     </div>
-  )
+  );
 };
 
 export default Student;

@@ -1,7 +1,7 @@
 import React from "react";
 import {Breadcrumb, Card, Table} from "flowbite-react";
-import InputText from "../components/reuseable/InputText";
-import Button from "../components/reuseable/Button";
+import InputText from "../components/InputText";
+import Button from "../components/Button";
 const SubjectAdd = () => {
   return (
     <div>
