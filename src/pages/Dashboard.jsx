@@ -18,7 +18,7 @@ const Dashboard = () => {
   ];
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex-col gap-3">
+      <div className="flex flex-col gap-3">
         <h2 className="text-3xl text-secondary">Dashboard</h2>
         <Breadcrumb model={model} />
       </div>
@@ -121,7 +121,7 @@ const Dashboard = () => {
             </Card>
           )}
           <Card>
-            <h2 className="text-secondary text-xl px-5 ">
+            <h2 className="text-secondary text-xl px-5">
               Attendance Report <span className="text-sm text-slate-300">| This Month</span>
             </h2>
             <ReportRadarChart />
