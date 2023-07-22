@@ -33,7 +33,7 @@ const Student = () => {
       </div>
       <div className="flex flex-col gap-10">
         <Card className="pb-3">
-        <form className="flex flex-row items-center gap-10 ml-10 mt-8" onSubmit={handleSubmit}>
+        <form className="flex justify-between items-center gap-10 mt-8 px-10" onSubmit={handleSubmit}>
           <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
           <SelectOption title="Section" option1="A" option2="B" option3="C" />
           <SelectOption title="Month" option1="Jan" option2="Feb" option3="March" />

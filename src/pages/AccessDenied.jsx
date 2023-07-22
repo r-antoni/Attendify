@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const AccessDenied = () => {
   return (
-    <div className="absolute left-[30%] top-28 flex flex-col object-cover w-[40%] items-center">
+    <div className="absolute left-[30%] top-80 flex flex-col object-cover w-[40%] items-center">
       <div className="flex items-center justify-center font-bold text-4xl uppercase">
-        <p>404 Forbidden</p>
+        <p>403 Forbidden</p>
       </div>
       <div className="w-96">
         <Lottie animationData={forbiddenAnimation} />
