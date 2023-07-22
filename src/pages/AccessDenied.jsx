@@ -1,11 +1,10 @@
-import React from "react";
 import Lottie from "lottie-react";
-import forbiddenAnimation from "../assets/animation/forbiddenError.json"
-import { Link } from "react-router-dom";
+import forbiddenAnimation from "../assets/animation/forbiddenError.json";
+import {Link} from "react-router-dom";
 
 const AccessDenied = () => {
   return (
-    <div className="absolute left-[30%] top-80 flex flex-col object-cover w-[40%] items-center">
+    <div className="absolute left-[30%] top-40 flex flex-col object-cover w-[40%] items-center">
       <div className="flex items-center justify-center font-bold text-4xl uppercase">
         <p>403 Forbidden</p>
       </div>
@@ -20,7 +19,7 @@ const AccessDenied = () => {
         </Link>
       </div>
     </div>
-  )
+  );
 };
 
 export default AccessDenied;
