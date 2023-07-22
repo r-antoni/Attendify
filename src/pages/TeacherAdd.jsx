@@ -2,6 +2,7 @@ import { Card } from "flowbite-react";
 import InputText from "../components/InputText";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
+import { Link } from "react-router-dom";
 
 const TeacherAdd = () => {
   const model = [
@@ -35,7 +36,9 @@ const TeacherAdd = () => {
           <InputText name="email" label="Email" type="text" placeholder="Email" />
           <InputText name="address" label="Addresss" type="text" placeholder="Address" />
           <div className="flex gap-5">
-            <Button>Submit</Button>
+            <Link to="/teachers">
+              <Button>Submit</Button>
+            </Link>
             <Button color="bg-slate-400">Reset</Button>
           </div>
         </Card>
