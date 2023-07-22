@@ -36,7 +36,7 @@ const TeacherAdd = () => {
           <InputText name="address" label="Addresss" type="text" placeholder="Address" />
           <div className="flex gap-5">
             <Button>Submit</Button>
-            <Button>Reset</Button>
+            <Button color="bg-slate-400">Reset</Button>
           </div>
         </Card>
       </div>

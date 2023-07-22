@@ -1,9 +1,10 @@
-import {Card, Table} from "flowbite-react";
+import { Card, Table } from "flowbite-react";
 import teacherCurrent from "../assets/json/TeacherCurrent.json";
-import edit from "../assets/icons/edit.svg";
-import trash from "../assets/icons/trash.svg";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
+import { Link } from "react-router-dom";
+import { BsTrash } from "react-icons/bs"
+import { FiEdit } from "react-icons/fi"
 
 const Teacher = () => {
   const model = [
@@ -23,9 +24,10 @@ const Teacher = () => {
           <h2 className="text-3xl text-secondary">Teachers</h2>
           <Breadcrumb model={model} />
         </div>
-        <div>
+        <Link to="/add-teacher">
           <Button>Add teacher</Button>
-        </div>
+        </Link>
+
       </div>
 
       <div className="flex flex-col gap-10">
@@ -51,8 +53,10 @@ const Teacher = () => {
                   <Table.Cell>{data.username}</Table.Cell>
                   <Table.Cell>{data.password}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
-                    <img src={edit} />
-                    <img src={trash} />
+                    <div className="flex gap-x-2">
+                      <FiEdit className="w-6 h-6 text-slate-500" />
+                      <BsTrash className="w-6 h-6 text-red-600" />
+                    </div>
                   </Table.Cell>
                 </Table.Row>
               ))}
