@@ -8,8 +8,10 @@ const RootLayout = () => {
       <Navbar />
       <div>
         <Sidebar />
-        <div className="fixed right-0 px-20 pt-28 w-[calc(100vw-18rem)]">
-          <Outlet />
+        <div className="fixed h-full right-0 w-[calc(100vw-18rem)]">
+          <div className="px-20 py-28 h-full max-h-full overflow-y-scroll">
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>
