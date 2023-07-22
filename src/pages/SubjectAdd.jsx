@@ -25,17 +25,19 @@ const SubjectAdd = () => {
         <h2 className="text-3xl text-secondary">Subject</h2>
         <Breadcrumb model={model} />
       </div>
-      <div className="w-1/2">
-        <Card>
+      <div >
+        <Card className="w-full flex justify-center items-center">
           <form className="px-5 w-full flex flex-col gap-5">
-            <h3 className="text-3xl text-title">Add a Subject</h3>
-            <InputText name="Subject name" label="Subject name" type="text" />
-            <InputText name="Subject code" label="Subject Code" type="text" />
-            <InputText name="Course" label="Course" type="text" />
-            <InputText name="Teacher" label="Teacher" type="text" />
-            <div className="flex flex-row gap-4">
-              <Button>Submit</Button>
-              <Button color="bg-slate-400">Reset</Button>
+            <h3 className="font-semibold text-2xl w-full flex justify-center text-title">Add a Subject</h3>
+            <div className="w-full flex flex-col justify-center items-center gap-5">
+              <InputText name="Subject name" label="Subject name" type="text" />
+              <InputText name="Subject code" label="Subject Code" type="text" />
+              <InputText name="Course" label="Course" type="text" />
+              <InputText name="Teacher" label="Teacher" type="text" />
+              <div className="flex flex-row gap-4">
+                <Button>Submit</Button>
+                <Button color="bg-slate-400">Reset</Button>
+              </div>
             </div>
           </form>
         </Card>

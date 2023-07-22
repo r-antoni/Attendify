@@ -1,14 +1,14 @@
-import {Card, Table} from "flowbite-react";
+import { Card, Table } from "flowbite-react";
 import SelectOption from "../components/SelectOption";
 import Button from "../components/Button";
-import {useDispatch, useSelector} from "react-redux";
-import {getItems} from "../reducers/AttendanceSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { getItems } from "../reducers/AttendanceSlice";
 import Breadcrumb from "../components/Breadcrumb";
 import { useEffect } from "react";
 import { toast } from "react-hot-toast";
 
 const Attendance = () => {
-  const {items, pending, active} = useSelector((state) => state.attendance);
+  const { items, pending, active } = useSelector((state) => state.attendance);
 
   const dispatch = useDispatch();
 
@@ -26,11 +26,11 @@ const Attendance = () => {
       path: "/attendance",
     },
   ];
-  useEffect(() =>{
-    if(active) {
+  useEffect(() => {
+    if (active) {
       toast.success("Data fetched successfully")
     }
-  },[active])
+  }, [active])
 
   return (
     <div>
@@ -40,7 +40,7 @@ const Attendance = () => {
       </div>
       <div className="flex flex-col gap-10">
         <Card className="pb-3">
-          <form onSubmit={handleSubmit} className="flex flex-row items-center gap-10 ml-10 mt-8">
+          <form onSubmit={handleSubmit} className="flex items-center gap-5 mt-8 ">
             <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
             <SelectOption title="Section" option1="A" option2="B" option3="C" />
             <SelectOption title="Date" option1="2023/03/15" option2="2023/03/16" option3="2023/03/17" />

@@ -54,8 +54,8 @@ const Teacher = () => {
                   <Table.Cell>{data.password}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
                     <div className="flex gap-x-2">
-                      <FiEdit className="w-6 h-6 text-slate-500" />
-                      <BsTrash className="w-6 h-6 text-red-600" />
+                      <button><FiEdit className="w-6 h-6 text-slate-500" /></button>
+                      <button><BsTrash className="w-6 h-6 text-red-600" /></button>
                     </div>
                   </Table.Cell>
                 </Table.Row>
