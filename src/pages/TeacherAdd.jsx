@@ -25,21 +25,21 @@ const TeacherAdd = () => {
         <h2 className="text-3xl text-secondary">Teacher</h2>
         <Breadcrumb model={model} />
       </div>
-      <div className="w-[50%]">
-        <Card>
-          <h1 className="font-semibold text-2xl text-title">Add a teacher</h1>
-          <InputText name="fullname" label="Full name" type="text" placeholder="full name" />
-          <div className="flex w-full gap-x-10">
-            <InputText name="username" label="Username" type="text" placeholder="Username" />
-            <InputText name="password" label="Password" type="password" placeholder="Password" />
-          </div>
-          <InputText name="email" label="Email" type="text" placeholder="Email" />
-          <InputText name="address" label="Addresss" type="text" placeholder="Address" />
-          <div className="flex gap-5">
-            <Link to="/teachers">
+      <div>
+        <Card className="w-full flex justify-center items-center">
+          <h1 className="font-semibold text-2xl w-full flex justify-center text-title">Add a teacher</h1>
+          <div className="w-full flex flex-col justify-center items-center gap-5">
+            <InputText name="fullname" label="Fullname" type="text" placeholder="full name" />
+            <div className="flex w-[48%] justify-center gap-8">
+              <InputText name="username" label="Username" type="text" placeholder="Username" />
+              <InputText name="password" label="Password" type="password" placeholder="Password" />
+            </div>
+            <InputText name="email" label="Email" type="email" placeholder="Email" />
+            <InputText name="address" label="Addresss" type="text" placeholder="Address" />
+            <div className="flex gap-5">
               <Button>Submit</Button>
-            </Link>
-            <Button color="bg-slate-400">Reset</Button>
+              <Button color="bg-slate-400">Reset</Button>
+            </div>
           </div>
         </Card>
       </div>

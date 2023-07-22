@@ -21,7 +21,7 @@ const Absence = () => {
       </div>
       <div>
         <Card className="flex-1">
-          <h1 className="text-2xl font-semibold text-title px-5 py-2">Absence record</h1>
+          <h1 className="text-2xl font-semibold text-title px-5 py-2">Absence</h1>
           <Table className="!w-full">
             <Table.Head>
               <Table.HeadCell>#</Table.HeadCell>
@@ -46,6 +46,7 @@ const Absence = () => {
               ))}
             </Table.Body>
           </Table>
+          <h1 className="text-2xl font-semibold text-title px-5 py-2">Absence records</h1>
           <Table className="!w-full">
             <Table.Head>
               <Table.HeadCell>#</Table.HeadCell>
