@@ -11,7 +11,6 @@ const Login = () => {
     status: null,
     message: "",
   });
-  console.log(errorData);
 
   const navigate = useNavigate();
 
@@ -21,7 +20,6 @@ const Login = () => {
     const password = e.target.password.value;
     const remember = e.target.remember.checked;
     const user = userData.find((user) => user.username === username);
-
     if (user) {
       if (user.password !== password) {
         return setErrorData({status: 400, message: "The password that you've entered is incorrect."});
