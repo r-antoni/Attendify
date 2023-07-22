@@ -1,9 +1,11 @@
 import Cookies from "js-cookie";
-import UserData from "../assets/json/user.json"
+import UserData from "../assets/json/user.json";
 
 const Auth = {
   authenticated: () => {
-    const user = UserData.find(obj => (obj.username === Cookies.get("username") && obj.password === Cookies.get("password")))
+    const user = UserData.find(
+      (obj) => obj.username === Cookies.get("username") && obj.password === Cookies.get("password"),
+    );
     return user;
   },
   logout: (navigate) => {

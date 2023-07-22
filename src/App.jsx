@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        element: <PrivateRoute roleRequired={"Admin" || "Teacher"} />,
+        element: <PrivateRoute roleRequired={["Admin", "Teacher"]} />,
         children: [
           {
             path: "attendance",
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
             element: <Students />,
           },
           {
-            element: <PrivateRoute roleRequired="Admin" />,
+            element: <PrivateRoute roleRequired={["Admin"]} />,
             children: [
               {
                 path: "absence",
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        element: <PrivateRoute roleRequired="Student" />,
+        element: <PrivateRoute roleRequired={["Student"]} />,
         children: [
           {
             path: "absent-app",
