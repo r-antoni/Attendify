@@ -2,6 +2,7 @@ import {Card, Table} from "flowbite-react";
 import Button from "../components/Button";
 import subject from "../assets/json/subject.json";
 import Breadcrumb from "../components/Breadcrumb";
+import { Link } from "react-router-dom";
 
 const Subject = () => {
   const model = [
@@ -21,9 +22,9 @@ const Subject = () => {
           <h2 className="text-3xl text-secondary">Subjects</h2>
           <Breadcrumb model={model} />
         </div>
-        <div>
+        <Link to="/add-subject">
           <Button>Add Subject</Button>
-        </div>
+        </Link>
       </div>
       <div>
         <Card className="flex-1">

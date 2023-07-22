@@ -1,6 +1,6 @@
-const Button = ({children, type = "button"}) => {
+const Button = ({children, color ="bg-[#4154F1]", type = "button"}) => {
   return (
-    <button className={` bg-[#4154F1] text-white rounded-lg px-4 py-2`} type={type}>
+    <button className={` ${color} text-white rounded-lg px-4 py-2`} type={type}>
       {children}
     </button>
   );
