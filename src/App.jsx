@@ -23,6 +23,7 @@ import Subject from "./pages/Subject";
 import SubjectAdd from "./pages/SubjectAdd";
 import Teacher from "./pages/Teacher";
 import TeacherAdd from "./pages/TeacherAdd";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
@@ -125,6 +126,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
+      <Toaster position="top-right"/>
       <RouterProvider router={router} />
     </>
   );
