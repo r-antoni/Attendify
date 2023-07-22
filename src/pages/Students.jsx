@@ -1,12 +1,12 @@
-import {Card, Table} from "flowbite-react";
+import { Card, Table } from "flowbite-react";
 import SelectOption from "../components/SelectOption";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
-import {useDispatch, useSelector} from "react-redux";
-import {getItems} from "../reducers/StudentSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { getItems } from "../reducers/StudentSlice";
 
 const Student = () => {
-  const {items, pending, active} = useSelector((state) => state.student);
+  const { items, pending, active } = useSelector((state) => state.student);
 
   const dispatch = useDispatch();
 
@@ -14,7 +14,7 @@ const Student = () => {
     e.preventDefault();
     dispatch(getItems());
   };
-   
+
   const model = [
     {
       title: "Home",
@@ -33,15 +33,15 @@ const Student = () => {
       </div>
       <div className="flex flex-col gap-10">
         <Card className="pb-3">
-        <form className="flex justify-between items-center gap-10 mt-8 px-10" onSubmit={handleSubmit}>
-          <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
-          <SelectOption title="Section" option1="A" option2="B" option3="C" />
-          <SelectOption title="Month" option1="Jan" option2="Feb" option3="March" />
-          <SelectOption title="Year" option1="2023" option2="2022" option3="2024" />
-          <Button type="submit">{pending ? "Loading" : "Generate Report"}</Button>
-        </form>
-      </Card>
-      <Card className={active ? "flex" : "hidden"}>
+          <form className="flex items-center gap-5 mt-8 " onSubmit={handleSubmit}>
+            <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
+            <SelectOption title="Section" option1="A" option2="B" option3="C" />
+            <SelectOption title="Month" option1="Jan" option2="Feb" option3="March" />
+            <SelectOption title="Year" option1="2023" option2="2022" option3="2024" />
+            <Button type="submit">{pending ? "Loading" : "Generate Report"}</Button>
+          </form>
+        </Card>
+        <Card className={active ? "flex" : "hidden"}>
           <h1 className="text-2xl px-5 py-2 font-semibold text-title">Attendance Sheet</h1>
           <div className="max-h-[500px] overflow-y-scroll">
             <Table className="!w-full">
@@ -65,7 +65,7 @@ const Student = () => {
           </div>
         </Card>
       </div>
-      
+
     </div>
   );
 };

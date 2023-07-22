@@ -27,7 +27,7 @@ const TeacherAdd = () => {
       </div>
       <div>
         <Card className="w-full flex justify-center items-center">
-          <h1 className="font-semibold text-2xl w-full flex justify-center text-title">Add a teacher</h1>
+          <h3 className="font-semibold text-2xl w-full flex justify-center text-title">Add a teacher</h3>
           <div className="w-full flex flex-col justify-center items-center gap-5">
             <InputText name="fullname" label="Fullname" type="text" placeholder="full name" />
             <div className="flex w-[48%] justify-center gap-8">

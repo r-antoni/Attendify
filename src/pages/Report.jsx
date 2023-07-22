@@ -1,12 +1,12 @@
-import {Card, Table} from "flowbite-react";
+import { Card, Table } from "flowbite-react";
 import Button from "../components/Button";
 import SelectOption from "../components/SelectOption";
 import Breadcrumb from "../components/Breadcrumb";
-import {useDispatch, useSelector} from "react-redux";
-import {getItems} from "../reducers/ReportSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { getItems } from "../reducers/ReportSlice";
 
 const Report = () => {
-  const {items, pending, active} = useSelector((state) => state.report);
+  const { items, pending, active } = useSelector((state) => state.report);
 
   const dispatch = useDispatch();
 
@@ -32,7 +32,7 @@ const Report = () => {
       </div>
       <div className="flex flex-col gap-10">
         <Card className="pb-3">
-          <form className="flex flex-row items-center gap-10 ml-10 mt-8" onSubmit={handleSubmit}>
+          <form className="flex items-center gap-5 mt-8 " onSubmit={handleSubmit}>
             <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
             <SelectOption title="Section" option1="A" option2="B" option3="C" />
             <SelectOption title="Month" option1="Jan" option2="Feb" option3="March" />
