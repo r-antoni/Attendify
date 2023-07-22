@@ -2,6 +2,7 @@ import { Card } from "flowbite-react";
 import InputText from "../components/InputText";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
+import { Link } from "react-router-dom";
 
 const TeacherAdd = () => {
   const model = [
