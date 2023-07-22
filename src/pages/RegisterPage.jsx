@@ -1,8 +1,7 @@
-import LoginText from "../components/LoginText";
-import InputText from "../components/InputText";
+import {Link} from "react-router-dom";
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
-
+import InputText from "../components/InputText";
+import LoginText from "../components/LoginText";
 
 const Register = () => {
   return (

@@ -1,8 +1,7 @@
-import { Card } from "flowbite-react";
-import InputText from "../components/InputText";
-import Button from "../components/Button";
+import {Card} from "flowbite-react";
 import Breadcrumb from "../components/Breadcrumb";
-import { Link } from "react-router-dom";
+import Button from "../components/Button";
+import InputText from "../components/InputText";
 
 const TeacherAdd = () => {
   const model = [

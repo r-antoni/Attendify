@@ -1,11 +1,10 @@
-import { Card, Table } from "flowbite-react";
+import {Card, Table} from "flowbite-react";
+import {GiCheckMark} from "react-icons/gi";
+import {HiXMark} from "react-icons/hi2";
+import {Link} from "react-router-dom";
+import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
 import subject from "../assets/json/subject.json";
-import Breadcrumb from "../components/Breadcrumb";
-import { Link } from "react-router-dom";
-import { GiCheckMark } from "react-icons/gi"
-import { HiXMark } from "react-icons/hi2"
-
 
 const Subject = () => {
   const model = [
@@ -50,8 +49,12 @@ const Subject = () => {
                   <Table.Cell>{data.semester}</Table.Cell>
                   <Table.Cell>{data.assigned_teacher}</Table.Cell>
                   <Table.Cell className="flex gap-2">
-                    <button><GiCheckMark className="text-white bg-green-400 px-1 py-1 h-6 w-6 rounded" /></button>
-                    <button><HiXMark className="text-white bg-red-500 px-1 py-1 h-6 w-6 rounded" /></button>
+                    <button>
+                      <GiCheckMark className="text-white bg-green-400 px-1 py-1 h-6 w-6 rounded" />
+                    </button>
+                    <button>
+                      <HiXMark className="text-white bg-red-500 px-1 py-1 h-6 w-6 rounded" />
+                    </button>
                   </Table.Cell>
                 </Table.Row>
               ))}

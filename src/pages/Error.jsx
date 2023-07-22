@@ -1,6 +1,6 @@
-import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
 import Animation from "../assets/animation/animation.json";
-import {Link} from "react-router-dom";
+import Lottie from "lottie-react";
 
 const Error = () => {
   return (

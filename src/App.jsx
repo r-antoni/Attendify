@@ -1,12 +1,14 @@
 //React Router
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+// React Toast
+import {Toaster} from "react-hot-toast";
 //Private & Protected Route
 import PrivateRoute from "./router/PrivateRoute";
 import ProtectedRoute from "./router/ProtectedRoutes";
 //Layouts
 import AuthLayout from "./layout/AuthLayout";
 import RootLayout from "./layout/RootLayout";
-//AuthPages
+//Auth Pages
 import Login from "./pages/LoginPage";
 import Register from "./pages/RegisterPage";
 //Pages
@@ -23,7 +25,6 @@ import Subject from "./pages/Subject";
 import SubjectAdd from "./pages/SubjectAdd";
 import Teacher from "./pages/Teacher";
 import TeacherAdd from "./pages/TeacherAdd";
-import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
@@ -126,7 +127,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <Toaster position="top-right"/>
+      <Toaster position="top-right" />
       <RouterProvider router={router} />
     </>
   );

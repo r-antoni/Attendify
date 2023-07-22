@@ -1,4 +1,4 @@
-const SelectOption = ({ title, option1, option2, option3 }) => {
+const SelectOption = ({title, option1, option2, option3}) => {
   return (
     <div className="relative flex-1">
       <p className="absolute z-10 -top-8 text-slate-400">{title}</p>

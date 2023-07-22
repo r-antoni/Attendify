@@ -1,10 +1,10 @@
-import { Card, Table } from "flowbite-react";
-import teacherCurrent from "../assets/json/TeacherCurrent.json";
-import Button from "../components/Button";
+import {BsTrash} from "react-icons/bs";
+import {Card, Table} from "flowbite-react";
+import {FiEdit} from "react-icons/fi";
+import {Link} from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
-import { Link } from "react-router-dom";
-import { BsTrash } from "react-icons/bs"
-import { FiEdit } from "react-icons/fi"
+import Button from "../components/Button";
+import teacherCurrent from "../assets/json/TeacherCurrent.json";
 
 const Teacher = () => {
   const model = [
@@ -27,7 +27,6 @@ const Teacher = () => {
         <Link to="/add-teacher">
           <Button>Add teacher</Button>
         </Link>
-
       </div>
 
       <div className="flex flex-col gap-10">
@@ -54,8 +53,12 @@ const Teacher = () => {
                   <Table.Cell>{data.password}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
                     <div className="flex gap-x-2">
-                      <button><FiEdit className="w-6 h-6 text-slate-500" /></button>
-                      <button><BsTrash className="w-6 h-6 text-red-600" /></button>
+                      <button>
+                        <FiEdit className="w-6 h-6 text-slate-500" />
+                      </button>
+                      <button>
+                        <BsTrash className="w-6 h-6 text-red-600" />
+                      </button>
                     </div>
                   </Table.Cell>
                 </Table.Row>
