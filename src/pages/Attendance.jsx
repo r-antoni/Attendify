@@ -37,9 +37,7 @@ const Attendance = () => {
             <SelectOption title="Subject" option1="Advance Java" option2="A" option3="B" />
             <SelectOption title="Section" option1="A" option2="B" option3="C" />
             <SelectOption title="Date" option1="2023/03/15" option2="2023/03/16" option3="2023/03/17" />
-            <div className="">
-              <Button type="submit">{pending ? "Loading" : "Generate Sheet"}</Button>
-            </div>
+            <Button type="submit">{pending ? "Loading" : "Generate Sheet"}</Button>
           </form>
         </Card>
         <Card className={active ? "flex" : "hidden"}>

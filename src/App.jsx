@@ -62,7 +62,6 @@ const router = createBrowserRouter([
             path: "attendance",
             element: <Attendance />,
           },
-
           {
             path: "reports",
             element: <Report />,
@@ -85,9 +84,6 @@ const router = createBrowserRouter([
               {
                 path: "subjects",
                 element: <Subject />,
-                children: [
-                  
-                ]
               },
               {
                 path: "add-subject",

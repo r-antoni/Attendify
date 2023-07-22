@@ -1,7 +1,8 @@
-import {Table} from "flowbite-react";
+import {Card, Table} from "flowbite-react";
 import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
 import {Link} from "react-router-dom";
+import absence from "../assets/json/absence.json";
 
 const AbsentApp = () => {
   const model = [
@@ -27,7 +28,9 @@ const AbsentApp = () => {
           </Button>
         </div>
       </div>
-      <Table className="!w-full">
+      <Card>
+      <h1 className="text-2xl font-semibold text-title px-5 py-2">Absence record</h1>
+        <Table className="!w-full">
         <Table.Head>
           <Table.HeadCell>#</Table.HeadCell>
           <Table.HeadCell>Student Name</Table.HeadCell>
@@ -36,7 +39,23 @@ const AbsentApp = () => {
           <Table.HeadCell>Absence For</Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
         </Table.Head>
+        <Table.Body>
+              {absence.map((data, i) => (
+                <Table.Row key={i}>
+                  <Table.Cell>{data.no}</Table.Cell>
+                  <Table.Cell>{data.student_name}</Table.Cell>
+                  <Table.Cell>{data.semester}</Table.Cell>
+                  <Table.Cell>{data.absence_reason}</Table.Cell>
+                  <Table.Cell>{data.absence_for}</Table.Cell>
+                  <Table.Cell>
+                    <p className="bg-green-400 flex justify-center  py-2 text-white rounded-lg">Approved</p>
+                  </Table.Cell>
+                </Table.Row>
+              ))}
+            </Table.Body>
       </Table>
+      </Card>
+      
     </div>
   );
 };
