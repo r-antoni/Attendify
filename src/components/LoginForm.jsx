@@ -11,15 +11,14 @@ const LoginForm = () => {
       username: e.target.username.value,
       password: e.target.password.value,
       remember: e.target.remember.checked,
-      role: "Student",
+      role: "Admin",
     };
     const expire = userData.remember && {expires: 30};
     Cookies.set("username", userData.username, expire);
-    Cookies.set("password", btoa(userData.password), expire);
+    Cookies.set("password", userData.password, expire);
     Cookies.set("role", userData.role, expire);
     navigate("/dashboard");
   };
-
   return (
     <form className="flex flex-col gap-10 justify-center min-h-screen  px-20" onSubmit={handleSubmit}>
       <div className="flex flex-col gap-6">
