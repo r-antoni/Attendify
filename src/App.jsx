@@ -85,6 +85,9 @@ const router = createBrowserRouter([
               {
                 path: "subjects",
                 element: <Subject />,
+                children: [
+                  
+                ]
               },
               {
                 path: "add-subject",
