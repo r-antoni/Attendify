@@ -4,6 +4,9 @@ import SelectOption from "../components/SelectOption";
 import Breadcrumb from "../components/Breadcrumb";
 import { useDispatch, useSelector } from "react-redux";
 import { getItems } from "../reducers/ReportSlice";
+import { useEffect } from "react";
+import { toast } from "react-hot-toast";
+
 
 const Report = () => {
   const { items, pending, active } = useSelector((state) => state.report);
@@ -24,6 +27,13 @@ const Report = () => {
       path: "/report",
     },
   ];
+
+  useEffect(() => {
+    if (active) {
+      toast.success("Data fetched successfully")
+    }
+  }, [active])
+
   return (
     <>
       <div className="flex flex-col gap-3 mb-9">

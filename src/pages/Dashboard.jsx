@@ -1,6 +1,6 @@
-import {Card, Timeline} from "flowbite-react";
-import {ReportLineChart, ReportRadarChart} from "../components/Charts";
-import {RiMapPinTimeLine} from "react-icons/ri";
+import { Card, Timeline } from "flowbite-react";
+import { ReportLineChart, ReportRadarChart } from "../components/Charts";
+import { RiMapPinTimeLine } from "react-icons/ri";
 import Auth from "../utils/Auth";
 import Breadcrumb from "../components/Breadcrumb";
 import EmptyIcon from "../assets/icons/div.svg";
@@ -17,14 +17,14 @@ const Dashboard = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-5">
       <div className="flex flex-col gap-3">
         <h2 className="text-3xl text-secondary">Dashboard</h2>
         <Breadcrumb model={model} />
       </div>
-      <main className="flex gap-10">
-        <div className="flex flex-col gap-10">
-          <div className="flex gap-10">
+      <main className="flex gap-5">
+        <div className="flex flex-col gap-5">
+          <div className="flex gap-5">
             <Card>
               <h2 className="text-secondary text-xl">
                 Present <span className="text-sm text-slate-300">| Today</span>
@@ -33,7 +33,7 @@ const Dashboard = () => {
                 <img src={EmptyIcon} />
                 <div className="flex flex-col">
                   <p className="text-xl text-secondary font-bold px-3">145</p>
-                  <p className="text-sm text-title font-bold px-3">
+                  <p className="text-xs flex gap-2 text-title font-bold px-3">
                     12% <span className="text-[#6C757D] font-normal">increase</span>
                   </p>
                 </div>
@@ -47,7 +47,7 @@ const Dashboard = () => {
                 <img src={EmptyIcon} />
                 <div className="flex flex-col">
                   <p className="text-xl text-secondary font-bold px-3">145</p>
-                  <p className="text-sm text-title font-bold px-3">
+                  <p className="text-xs flex gap-2 text-title font-bold px-3">
                     12% <span className="text-[#6C757D] font-normal">increase</span>
                   </p>
                 </div>
@@ -61,7 +61,7 @@ const Dashboard = () => {
                 <img src={EmptyIcon} />
                 <div className="flex flex-col">
                   <p className="text-xl text-secondary font-bold px-3">145</p>
-                  <p className="text-sm text-title font-bold px-3">
+                  <p className="text-xs flex gap-2 text-title font-bold px-3">
                     12% <span className="text-[#6C757D] font-normal">increase</span>
                   </p>
                 </div>
@@ -77,7 +77,7 @@ const Dashboard = () => {
             </Card>
           </div>
         </div>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-5">
           {Auth.adminRole() && (
             <Card className="w-96 px-5">
               <h2 className="text-secondary text-xl">
