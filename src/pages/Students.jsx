@@ -1,9 +1,11 @@
 import { Card, Table } from "flowbite-react";
-import SelectOption from "../components/SelectOption";
-import Button from "../components/Button";
-import Breadcrumb from "../components/Breadcrumb";
-import { useDispatch, useSelector } from "react-redux";
 import { getItems } from "../reducers/StudentSlice";
+import { toast } from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import Breadcrumb from "../components/Breadcrumb";
+import Button from "../components/Button";
+import SelectOption from "../components/SelectOption";
 
 const Student = () => {
   const { items, pending, active } = useSelector((state) => state.student);
@@ -25,6 +27,13 @@ const Student = () => {
       path: "/student",
     },
   ];
+
+  useEffect(() => {
+    if (active) {
+      toast.success("Data fetched successfully")
+    }
+  }, [active])
+
   return (
     <div>
       <div className="flex-col gap-3 mb-9">
