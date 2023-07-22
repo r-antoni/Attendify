@@ -1,4 +1,4 @@
-import { Card } from "flowbite-react";
+import {Card} from "flowbite-react";
 import InputText from "../components/InputText";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
@@ -25,7 +25,7 @@ const SubjectAdd = () => {
         <h2 className="text-3xl text-secondary">Subject</h2>
         <Breadcrumb model={model} />
       </div>
-      <div >
+      <div>
         <Card className="w-full flex justify-center items-center">
           <form className="px-5 w-full flex flex-col gap-5">
             <h3 className="font-semibold text-2xl w-full flex justify-center text-title">Add a Subject</h3>

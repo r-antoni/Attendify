@@ -1,15 +1,14 @@
-import { Card, Table } from "flowbite-react";
+import {Card, Table} from "flowbite-react";
+import {getItems} from "../reducers/ReportSlice";
+import {toast} from "react-hot-toast";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
 import SelectOption from "../components/SelectOption";
-import Breadcrumb from "../components/Breadcrumb";
-import { useDispatch, useSelector } from "react-redux";
-import { getItems } from "../reducers/ReportSlice";
-import { useEffect } from "react";
-import { toast } from "react-hot-toast";
-
 
 const Report = () => {
-  const { items, pending, active } = useSelector((state) => state.report);
+  const {items, pending, active} = useSelector((state) => state.report);
 
   const dispatch = useDispatch();
 
@@ -30,9 +29,9 @@ const Report = () => {
 
   useEffect(() => {
     if (active) {
-      toast.success("Data fetched successfully")
+      toast.success("Data fetched successfully");
     }
-  }, [active])
+  }, [active]);
 
   return (
     <>

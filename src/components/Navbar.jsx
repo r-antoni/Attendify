@@ -1,9 +1,9 @@
-import Cookies from "js-cookie";
-import Logo from "../assets/img/attendify.png";
-import BellIcon from "../assets/icons/notif.svg";
-import Profile from "../assets/icons/pic.svg";
 import {Card} from "flowbite-react";
 import {useState} from "react";
+import BellIcon from "../assets/icons/notif.svg";
+import Cookies from "js-cookie";
+import Logo from "../assets/img/attendify.png";
+import Profile from "../assets/icons/pic.svg";
 
 const Navbar = ({visibility}) => {
   const username = Cookies.get("username");

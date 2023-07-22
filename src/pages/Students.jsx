@@ -1,14 +1,14 @@
-import { Card, Table } from "flowbite-react";
-import { getItems } from "../reducers/StudentSlice";
-import { toast } from "react-hot-toast";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import {Card, Table} from "flowbite-react";
+import {getItems} from "../reducers/StudentSlice";
+import {toast} from "react-hot-toast";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
 import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
 import SelectOption from "../components/SelectOption";
 
 const Student = () => {
-  const { items, pending, active } = useSelector((state) => state.student);
+  const {items, pending, active} = useSelector((state) => state.student);
 
   const dispatch = useDispatch();
 
@@ -30,9 +30,9 @@ const Student = () => {
 
   useEffect(() => {
     if (active) {
-      toast.success("Data fetched successfully")
+      toast.success("Data fetched successfully");
     }
-  }, [active])
+  }, [active]);
 
   return (
     <div>
@@ -74,7 +74,6 @@ const Student = () => {
           </div>
         </Card>
       </div>
-
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import { Card, Timeline } from "flowbite-react";
-import { ReportLineChart, ReportRadarChart } from "../components/Charts";
-import { RiMapPinTimeLine } from "react-icons/ri";
+import {Card, Timeline} from "flowbite-react";
+import {ReportLineChart, ReportRadarChart} from "../components/Charts";
+import {RiMapPinTimeLine} from "react-icons/ri";
 import Auth from "../utils/Auth";
 import Breadcrumb from "../components/Breadcrumb";
 import EmptyIcon from "../assets/icons/div.svg";
