@@ -4,6 +4,8 @@ import Button from "../components/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {getItems} from "../reducers/AttendanceSlice";
 import Breadcrumb from "../components/Breadcrumb";
+import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 
 const Attendance = () => {
   const {items, pending, active} = useSelector((state) => state.attendance);
@@ -24,6 +26,11 @@ const Attendance = () => {
       path: "/attendance",
     },
   ];
+  useEffect(() =>{
+    if(active) {
+      toast.success("Data fetched successfully")
+    }
+  },[active])
 
   return (
     <div>
@@ -48,7 +55,7 @@ const Attendance = () => {
                 <Table.HeadCell>No</Table.HeadCell>
                 <Table.HeadCell>Student Name</Table.HeadCell>
                 <Table.HeadCell>Course</Table.HeadCell>
-                <Table.HeadCell>Smester</Table.HeadCell>
+                <Table.HeadCell>Semester</Table.HeadCell>
               </Table.Head>
               <Table.Body>
                 {items.map((data, i) => (

@@ -41,7 +41,10 @@ const Absence = () => {
                   <Table.Cell>{data.semester}</Table.Cell>
                   <Table.Cell>{data.absence_reason}</Table.Cell>
                   <Table.Cell>{data.absence_for}</Table.Cell>
-                  <Table.Cell>{data.action}</Table.Cell>
+                  <Table.Cell>
+                    <button></button>
+                    <button></button>
+                  </Table.Cell>
                 </Table.Row>
               ))}
             </Table.Body>
