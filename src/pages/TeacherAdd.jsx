@@ -1,4 +1,4 @@
-import {Card} from "flowbite-react";
+import { Card } from "flowbite-react";
 import InputText from "../components/InputText";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
@@ -29,17 +29,11 @@ const TeacherAdd = () => {
           <h1 className="font-semibold text-2xl text-title">Add a teacher</h1>
           <InputText name="fullname" label="Full name" type="text" placeholder="full name" />
           <div className="flex w-full gap-x-10">
-            <div className="w-[50%]">
-              <InputText name="username" label="Username" type="text" placeholder="Username" />
-            </div>
-            <div className="w-[50%]">
-              <InputText name="password" label="Password" type="password" placeholder="Password" />
-            </div>
+            <InputText name="username" label="Username" type="text" placeholder="Username" />
+            <InputText name="password" label="Password" type="password" placeholder="Password" />
           </div>
-          <div className="flex flex-col gap-y-6">
-            <InputText name="email" label="Email" type="text" placeholder="Email" />
-            <InputText name="address" label="Addresss" type="text" placeholder="Address" />
-          </div>
+          <InputText name="email" label="Email" type="text" placeholder="Email" />
+          <InputText name="address" label="Addresss" type="text" placeholder="Address" />
           <div className="flex gap-5">
             <Button>Submit</Button>
             <Button>Reset</Button>
