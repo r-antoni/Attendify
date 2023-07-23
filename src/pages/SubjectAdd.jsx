@@ -1,8 +1,8 @@
 import {Card} from "flowbite-react";
+import {Link} from "react-router-dom";
 import InputText from "../components/InputText";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
-import {Link} from "react-router-dom";
 
 const SubjectAdd = () => {
   const model = [
@@ -36,10 +36,12 @@ const SubjectAdd = () => {
               <InputText name="Course" label="Course" type="text" />
               <InputText name="Teacher" label="Teacher" type="text" />
               <div className="flex flex-row gap-4">
-                <Button>
+                <Button type="submit">
                   <Link to="/subjects">Submit</Link>
                 </Button>
-                <Button color="bg-slate-400">Reset</Button>
+                <Button color="bg-slate-400" type="reset">
+                  Reset
+                </Button>
               </div>
             </div>
           </form>

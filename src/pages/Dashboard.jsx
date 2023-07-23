@@ -18,7 +18,7 @@ const Dashboard = () => {
   ];
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
         <h2 className="text-3xl text-secondary">Dashboard</h2>
         <Breadcrumb model={model} />
       </div>
@@ -41,7 +41,7 @@ const Dashboard = () => {
             </Card>
             <Card>
               <h2 className="text-secondary text-xl">
-                Present <span className="text-sm text-slate-300">| Today</span>
+                Absent <span className="text-sm text-slate-300">| Today</span>
               </h2>
               <div className={`flex px-5`}>
                 <img src={EmptyIcon} />
@@ -55,7 +55,7 @@ const Dashboard = () => {
             </Card>
             <Card>
               <h2 className="text-secondary text-xl">
-                Present <span className="text-sm text-slate-300">| Today</span>
+                Attendance <span className="text-sm text-slate-300">| Today</span>
               </h2>
               <div className={`flex px-5`}>
                 <img src={EmptyIcon} />

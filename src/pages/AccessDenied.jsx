@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import forbiddenAnimation from "../assets/animation/forbiddenError.json"
+import {Link} from "react-router-dom";
+import forbiddenAnimation from "../assets/animation/forbiddenError.json";
 import Lottie from "lottie-react";
 
 const AccessDenied = () => {
@@ -19,7 +19,7 @@ const AccessDenied = () => {
         </Link>
       </div>
     </div>
-  )
+  );
 };
 
 export default AccessDenied;

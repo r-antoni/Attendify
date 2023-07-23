@@ -36,7 +36,7 @@ const Student = () => {
 
   return (
     <div>
-      <div className="flex-col gap-3 mb-9">
+      <div className="flex flex-col gap-2 mb-9">
         <h2 className="text-3xl text-secondary">Students</h2>
         <Breadcrumb model={model} />
       </div>
