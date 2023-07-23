@@ -1,6 +1,7 @@
 import {Card} from "flowbite-react";
 import Breadcrumb from "../components/Breadcrumb";
 import InputText from "../components/InputText";
+import {Link} from "react-router-dom";
 
 const AbsentAppAdd = () => {
   const model = [
@@ -36,7 +37,7 @@ const AbsentAppAdd = () => {
           </div>
           <div className="flex gap-5">
             <button className="bg-secondary px-5 py-2 rounded-lg text-white" type="submit">
-              Submit
+              <Link to="/absent-app">Submit</Link>
             </button>
             <button className="bg-slate-400 px-5 py-2 rounded-lg text-white" type="reset">
               Reset
