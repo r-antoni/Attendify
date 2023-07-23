@@ -12,7 +12,7 @@ const TeacherAdd = () => {
     },
     {
       title: "Teachers",
-      path: "/teacher",
+      path: "/teachers",
     },
     {
       title: "Add Teacher",
