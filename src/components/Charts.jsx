@@ -33,8 +33,8 @@ export const ReportLineChart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}} />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="Absent" stroke="#8884d8" activeDot={{r: 8}} />
+        <Line type="monotone" dataKey="Present" stroke="#82ca9d" />
       </LineChart>
     </ResponsiveContainer>
   );
@@ -47,7 +47,7 @@ export const ReportRadarChart = () => {
         <PolarGrid />
         <PolarAngleAxis dataKey="subject" />
         <PolarRadiusAxis />
-        <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#4154F1" fillOpacity={0.8} />
+        <Radar name="Subject" dataKey="A" stroke="#8884d8" fill="#4154F1" fillOpacity={0.8} />
       </RadarChart>
     </ResponsiveContainer>
   );

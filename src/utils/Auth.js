@@ -1,9 +1,9 @@
 import Cookies from "js-cookie";
-import UserData from "../assets/json/user.json";
+import userData from "../assets/json/user.json";
 
 const Auth = {
   authenticated: () => {
-    const user = UserData.find(
+    const user = userData.find(
       (obj) => obj.username === Cookies.get("username") && obj.password === Cookies.get("password"),
     );
     return user;

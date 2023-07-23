@@ -87,29 +87,29 @@ const Dashboard = () => {
                 <Timeline.Item>
                   <Timeline.Point icon={RiMapPinTimeLine} />
                   <Timeline.Content>
-                    <Timeline.Time>February 2022</Timeline.Time>
-                    <Timeline.Title>Application UI code in Tailwind</Timeline.Title>
+                    <Timeline.Time>Tuesday</Timeline.Time>
+                    <Timeline.Title className="text-sm">2 Teacher Added into teacher list</Timeline.Title>
                   </Timeline.Content>
                 </Timeline.Item>
                 <Timeline.Item>
                   <Timeline.Point icon={RiMapPinTimeLine} />
                   <Timeline.Content>
-                    <Timeline.Time>March 2022</Timeline.Time>
-                    <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+                    <Timeline.Time>Monday</Timeline.Time>
+                    <Timeline.Title className="text-sm">30 Absent requests on Math need confirmation</Timeline.Title>
                   </Timeline.Content>
                 </Timeline.Item>
                 <Timeline.Item>
                   <Timeline.Point icon={RiMapPinTimeLine} />
                   <Timeline.Content>
-                    <Timeline.Time>April 2022</Timeline.Time>
-                    <Timeline.Title>E-Commerce UI code in Tailwind</Timeline.Title>
+                    <Timeline.Time>Sunday</Timeline.Time>
+                    <Timeline.Title className="text-sm">Application updated to latest version</Timeline.Title>
                   </Timeline.Content>
                 </Timeline.Item>
               </Timeline>
             </Card>
           )}
           <Card>
-            <h2 className="text-secondary text-xl px-5">
+            <h2 className="text-secondary text-xl">
               Attendance Report <span className="text-sm text-slate-300">| This Month</span>
             </h2>
             <ReportRadarChart />
