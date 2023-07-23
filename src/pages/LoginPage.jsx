@@ -1,5 +1,5 @@
-import { useNavigate, Link } from "react-router-dom";
-import { useState } from "react";
+import {useNavigate, Link} from "react-router-dom";
+import {useState} from "react";
 import Button from "../components/Button";
 import Cookies from "js-cookie";
 import InputText from "../components/InputText";
@@ -22,15 +22,15 @@ const Login = () => {
     const user = userData.find((user) => user.username === username);
     if (user) {
       if (user.password !== password) {
-        return setErrorData({ status: 400, message: "The password that you've entered is incorrect." });
+        return setErrorData({status: 400, message: "The password that you've entered is incorrect."});
       }
-      const expire = remember && { expires: 30 };
+      const expire = remember && {expires: 30};
       Cookies.set("username", user.username, expire);
       Cookies.set("password", user.password, expire);
       Cookies.set("role", user.role, expire);
-      return setErrorData({ status: 200, message: "Success" });
+      return setErrorData({status: 200, message: "Success"});
     } else {
-      return setErrorData({ status: 404, message: "Cannot find user" });
+      return setErrorData({status: 404, message: "Cannot find user"});
     }
   };
   errorData.status === 200 && navigate("/dashboard");

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import Animation from "../assets/animation/animation.json";
 import Lottie from "lottie-react";
 

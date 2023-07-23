@@ -19,7 +19,7 @@ const Teacher = () => {
   ];
   return (
     <div>
-      <div className="flex justify-between gap-3 mb-9">
+      <div className="flex justify-between gap-2 mb-9">
         <div>
           <h2 className="text-3xl text-secondary">Teachers</h2>
           <Breadcrumb model={model} />
@@ -28,7 +28,6 @@ const Teacher = () => {
           <Button>Add teacher</Button>
         </Link>
       </div>
-
       <div className="flex flex-col gap-10">
         <Card className="flex-1">
           <h1 className="text-2xl font-semibold text-title px-5 py-2">Attendance Sheet</h1>
