@@ -60,9 +60,8 @@ const Sidebar = () => {
               </NavLink>
             </>
           )}
-          {(Auth.adminRole() || Auth.teacherRole()) && (
+          {Auth.adminRole() && (
             <>
-              {Auth.teacherRole() && <h3 className="uppercase text-xs px-2 py-2 text-[#989797]">Manage</h3>}
               <NavLink className="flex gap-2 px-4 py-2 text-title font-medium hover:bg-[#F6F9FF]" to="/students">
                 <img src={StudentIcon} />
                 Students
