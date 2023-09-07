@@ -14,7 +14,7 @@ const Teacher = () => {
     },
     {
       title: "Teachers",
-      path: "/teacher",
+      path: "/teachers",
     },
   ];
   return (
