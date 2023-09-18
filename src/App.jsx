@@ -8,9 +8,10 @@ import ProtectedRoute from "./router/ProtectedRoutes";
 //Layouts
 import AuthLayout from "./layout/AuthLayout";
 import RootLayout from "./layout/RootLayout";
+// Landing Page
+import LandingPage from "./pages/LandingPage";
 //Auth Pages
 import Login from "./pages/LoginPage";
-import Register from "./pages/RegisterPage";
 //Pages
 import Absence from "./pages/Absence";
 import AbsentApp from "./pages/AbsentApp";
@@ -29,18 +30,18 @@ import TeacherAdd from "./pages/TeacherAdd";
 
 const router = createBrowserRouter([
   {
-    element: <AuthLayout />,
+    element: <ProtectedRoute />,
     children: [
       {
-        element: <ProtectedRoute />,
+        index: true,
+        element: <LandingPage />,
+      },
+      {
+        element: <AuthLayout />,
         children: [
           {
-            index: true,
+            path: "login",
             element: <Login />,
-          },
-          {
-            path: "register",
-            element: <Register />,
           },
         ],
       },

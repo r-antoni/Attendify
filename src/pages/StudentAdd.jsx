@@ -5,20 +5,20 @@ import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
 
 const StudentAdd = () => {
-    const model = [
-        {
-          title: "Home",
-          path: "/",
-        },
-        {
-          title: "Students",
-          path: "/students",
-        },
-        {
-          title: "Add Student",
-          path: "/add-student",
-        },
-      ];
+  const model = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Students",
+      path: "/students",
+    },
+    {
+      title: "Add Student",
+      path: "/add-student",
+    },
+  ];
   return (
     <div className="flex flex-col gap-10">
       <div className="flex-col gap-3">
@@ -48,7 +48,7 @@ const StudentAdd = () => {
         </Card>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default StudentAdd
+export default StudentAdd;

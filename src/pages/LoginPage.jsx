@@ -54,14 +54,6 @@ const Login = () => {
             <input className="rounded" type="checkbox" name="remember" /> <span>Remember me</span>
           </div>
           <Button type="submit">Sign In</Button>
-          <p className="text-sm">
-            Don't have an account ?{" "}
-            <span>
-              <Link className="text-secondary" to="/register">
-                Register Here
-              </Link>
-            </span>
-          </p>
         </div>
       </form>
     </div>

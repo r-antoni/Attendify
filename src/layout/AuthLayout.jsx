@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 const AuthLayout = () => {
   return (
     <div className="bg-[#EDF1F7]">
-      <Navbar visibility="hidden" />
+      <Navbar visibility="hidden" homemenu="hidden" />
       <div className="flex justify-center">
         <Outlet />
       </div>
