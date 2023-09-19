@@ -33,23 +33,21 @@ const Teacher = () => {
           <h1 className="text-2xl font-semibold text-title px-5 py-2">Attendance Sheet</h1>
           <Table className="!w-full">
             <Table.Head>
-              <Table.HeadCell>#</Table.HeadCell>
+              <Table.HeadCell>ID</Table.HeadCell>
               <Table.HeadCell>Student name</Table.HeadCell>
-              <Table.HeadCell>Address</Table.HeadCell>
+              <Table.HeadCell>Phone Number</Table.HeadCell>
               <Table.HeadCell>Email</Table.HeadCell>
               <Table.HeadCell>Username</Table.HeadCell>
-              <Table.HeadCell>password</Table.HeadCell>
-              <Table.HeadCell>action</Table.HeadCell>
+              <Table.HeadCell>Action</Table.HeadCell>
             </Table.Head>
             <Table.Body>
               {teacherCurrent.map((data, i) => (
                 <Table.Row key={i}>
                   <Table.Cell>{data.number}</Table.Cell>
                   <Table.Cell>{data.teacher_name}</Table.Cell>
-                  <Table.Cell>{data.address}</Table.Cell>
+                  <Table.Cell>{data.phone}</Table.Cell>
                   <Table.Cell>{data.email}</Table.Cell>
                   <Table.Cell>{data.username}</Table.Cell>
-                  <Table.Cell>{data.password}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
                     <div className="flex gap-x-2">
                       <button>

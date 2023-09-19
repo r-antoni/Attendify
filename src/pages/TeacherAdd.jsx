@@ -35,7 +35,7 @@ const TeacherAdd = () => {
               <InputText name="password" label="Password" type="password" placeholder="Password" />
             </div>
             <InputText name="email" label="Email" type="email" placeholder="Email" />
-            <InputText name="address" label="Addresss" type="text" placeholder="Address" />
+            <InputText name="phone" label="Phone Number" type="phone_number" placeholder="Phone Number" />
             <div className="flex gap-5">
               <Button type="submit">
                 <Link to="/teachers">Submit</Link>

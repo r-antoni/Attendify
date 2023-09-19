@@ -12,7 +12,7 @@ const Auth = {
     Cookies.remove("username");
     Cookies.remove("password");
     Cookies.remove("role");
-    navigate("/");
+    navigate("/login");
   },
   adminRole: () => {
     const role = Cookies.get("role");

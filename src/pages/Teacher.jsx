@@ -34,22 +34,20 @@ const Teacher = () => {
           <Table className="!w-full">
             <Table.Head>
               <Table.HeadCell>#</Table.HeadCell>
-              <Table.HeadCell>Teacher name</Table.HeadCell>
-              <Table.HeadCell>Address</Table.HeadCell>
+              <Table.HeadCell>Teacher Name</Table.HeadCell>
+              <Table.HeadCell>Phone Number</Table.HeadCell>
               <Table.HeadCell>Email</Table.HeadCell>
               <Table.HeadCell>Username</Table.HeadCell>
-              <Table.HeadCell>password</Table.HeadCell>
-              <Table.HeadCell>action</Table.HeadCell>
+              <Table.HeadCell>Action</Table.HeadCell>
             </Table.Head>
             <Table.Body>
               {teacherCurrent.map((data, i) => (
                 <Table.Row key={i}>
                   <Table.Cell>{data.number}</Table.Cell>
                   <Table.Cell>{data.teacher_name}</Table.Cell>
-                  <Table.Cell>{data.address}</Table.Cell>
+                  <Table.Cell>{data.phone_number}</Table.Cell>
                   <Table.Cell>{data.email}</Table.Cell>
                   <Table.Cell>{data.username}</Table.Cell>
-                  <Table.Cell>{data.password}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
                     <div className="flex gap-x-2">
                       <button>
