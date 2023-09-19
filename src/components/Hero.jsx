@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="flex justify-center gap-10 mt-40 px-20">
       <div className="flex flex-col gap-5">
         <h1 class="text-3xl font-bold py-2">
-          <span class="text-title">Attendify</span> - The Best Solution For Absence Management.
+          <span class="text-secondary">Attendify</span> - The Best Solution For Absence Management.
         </h1>
         <p class="text-lg py-3 font-medium">
           <span class="text-secondary">Reliable</span> & <span class="text-secondary">Efficient</span> web based

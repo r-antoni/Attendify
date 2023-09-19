@@ -15,7 +15,7 @@ const Navbar = ({visibility, homemenu}) => {
   };
   return (
     <div className="fixed w-full z-10 bg-white">
-      <div className="flex justify-between items-center h-16 px-20 py-4 shadow-md">
+      <div className="flex justify-between items-center h-20 px-20 py-4 shadow-md">
         <div className=" flex ga text-3xl text-title font-semibold">
           <Link to="/">
           <img className="w-10 h-10 items-center" src={Logo} alt="attendify logo" />
@@ -33,16 +33,16 @@ const Navbar = ({visibility, homemenu}) => {
         </div>
         <div className={`${homemenu} text-sm uppercase font-medium text-title`}>
           <ul className="flex items-center gap-10">
-            <li className="hover:text-[#4154F1]">
+            <li className="hover:text-secondary">
               <Link to="/blog">Blog</Link>
             </li>
-            <li className="hover:text-[#4154F1]">
+            <li className="hover:text-secondary">
               <Link to="/pricing">Pricing</Link>
             </li>
-            <li className="hover:text-[#4154F1]">
+            <li className="hover:text-secondary">
               <Link to="#contact">Contact</Link>
             </li>
-            <li className="hover:text-[#4154F1]">
+            <li className="hover:text-secondary">
               <Link to="/faq">FAQ</Link>
             </li>
           </ul>
