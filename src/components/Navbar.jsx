@@ -18,7 +18,7 @@ const Navbar = ({visibility, homemenu}) => {
       <div className="flex justify-between items-center h-20 px-20 py-4 shadow-md">
         <div className=" flex ga text-3xl text-title font-semibold">
           <Link to="/">
-          <img className="w-10 h-10 items-center" src={Logo} alt="attendify logo" />
+            <img className="w-10 h-10 items-center" src={Logo} alt="attendify logo" />
           </Link>
           ttendify
         </div>
