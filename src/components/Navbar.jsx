@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {useState} from "react";
 import BellIcon from "../assets/icons/notif.svg";
 import Cookies from "js-cookie";
-import Logo from "../assets/img/attendify.png";
+import Logo from "../assets/img/attendify.svg";
 import Profile from "../assets/icons/pic.svg";
 import Button from "./Button";
 
@@ -47,7 +47,7 @@ const Navbar = ({visibility, homemenu}) => {
             </li>
           </ul>
         </div>
-        <div className={`${homemenu} uppercase`}>
+        <div className={`${homemenu} uppercase text-sm`}>
           <Button>
             <Link to="/login">Launch App</Link>
           </Button>

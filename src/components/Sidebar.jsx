@@ -22,8 +22,8 @@ const Sidebar = () => {
   const username = Cookies.get("username");
 
   return (
-    <div className="fixed h-full top-16 shadow-lg w-72">
-      <div className="flex flex-col justify-between bg-white min-h-screen pl-6 pr-10 pt-6">
+    <div className="fixed h-full top-20 shadow-lg w-72 ">
+      <div className="flex flex-col justify-between bg-white min-h-screen pl-6 pr-10 pt-8">
         <div className="flex flex-col gap-2">
           {(Auth.adminRole() || Auth.teacherRole()) && (
             <>

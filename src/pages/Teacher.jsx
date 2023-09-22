@@ -25,7 +25,7 @@ const Teacher = () => {
           <Breadcrumb model={model} />
         </div>
         <Link to="/add-teacher">
-          <Button>Add teacher</Button>
+          <Button>Add Teacher</Button>
         </Link>
       </div>
       <div className="flex flex-col gap-10">
@@ -33,7 +33,7 @@ const Teacher = () => {
           <h1 className="text-2xl font-semibold text-title px-5 py-2">Attendance Sheet</h1>
           <Table className="!w-full">
             <Table.Head>
-              <Table.HeadCell>#</Table.HeadCell>
+              <Table.HeadCell>ID</Table.HeadCell>
               <Table.HeadCell>Teacher Name</Table.HeadCell>
               <Table.HeadCell>Phone Number</Table.HeadCell>
               <Table.HeadCell>Email</Table.HeadCell>
