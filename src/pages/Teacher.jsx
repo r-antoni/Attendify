@@ -4,7 +4,6 @@ import {FiEdit} from "react-icons/fi";
 import {Link} from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
-import teacherCurrent from "../assets/json/TeacherCurrent.json";
 import axios from "axios";
 import React, {useEffect, useState} from "react";
 
@@ -27,7 +26,7 @@ const Teacher = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get(`http://localhost:5000/users`);
+    const response = await axios.get(`http://localhost:5000/teachers`);
     setUser(response.data);
   };
 
