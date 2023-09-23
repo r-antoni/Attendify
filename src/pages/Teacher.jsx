@@ -5,6 +5,8 @@ import {Link} from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
 import teacherCurrent from "../assets/json/TeacherCurrent.json";
+import axios from "axios";
+import React, {useEffect, useState} from "react";
 
 const Teacher = () => {
   const model = [
@@ -17,6 +19,18 @@ const Teacher = () => {
       path: "/teachers",
     },
   ];
+
+  const [users, setUser] = useState([]);
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  const getUsers = async () => {
+    const response = await axios.get(`http://localhost:5000/users`);
+    setUser(response.data);
+  };
+
   return (
     <div>
       <div className="flex justify-between gap-2 mb-9">
@@ -41,13 +55,13 @@ const Teacher = () => {
               <Table.HeadCell>Action</Table.HeadCell>
             </Table.Head>
             <Table.Body>
-              {teacherCurrent.map((data, i) => (
-                <Table.Row key={i}>
-                  <Table.Cell>{data.number}</Table.Cell>
-                  <Table.Cell>{data.teacher_name}</Table.Cell>
-                  <Table.Cell>{data.phone_number}</Table.Cell>
-                  <Table.Cell>{data.email}</Table.Cell>
-                  <Table.Cell>{data.username}</Table.Cell>
+              {users.map((user, index) => (
+                <Table.Row key={user.id}>
+                  <Table.Cell>{index + 1}</Table.Cell>
+                  <Table.Cell>{user.TeacherName}</Table.Cell>
+                  <Table.Cell>{user.Number}</Table.Cell>
+                  <Table.Cell>{user.Email}</Table.Cell>
+                  <Table.Cell>{user.Username}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
                     <div className="flex gap-x-2">
                       <button>
