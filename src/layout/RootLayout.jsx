@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom";
 
 const RootLayout = () => {
   return (
-    <div className="bg-[#EDF1F7] min-h-screen w-full">
+    <div className="bg-primary bg-opacity-10 min-h-screen w-full">
       <Navbar homemenu="hidden" />
       <div>
         <Sidebar />

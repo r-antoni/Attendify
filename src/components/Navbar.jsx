@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {useState} from "react";
 import BellIcon from "../assets/icons/notif.svg";
 import Cookies from "js-cookie";
-import Logo from "../assets/img/attendify.png";
+import Logo from "../assets/img/attendify.svg";
 import Profile from "../assets/icons/pic.svg";
 import Button from "./Button";
 
@@ -18,7 +18,7 @@ const Navbar = ({visibility, homemenu}) => {
       <div className="flex justify-between items-center h-20 px-20 py-4 shadow-md">
         <div className=" flex ga text-3xl text-title font-semibold">
           <Link to="/">
-          <img className="w-10 h-10 items-center" src={Logo} alt="attendify logo" />
+            <img className="w-10 h-10 items-center" src={Logo} alt="attendify logo" />
           </Link>
           ttendify
         </div>
@@ -47,7 +47,7 @@ const Navbar = ({visibility, homemenu}) => {
             </li>
           </ul>
         </div>
-        <div className={`${homemenu} uppercase`}>
+        <div className={`${homemenu} uppercase text-sm`}>
           <Button>
             <Link to="/login">Launch App</Link>
           </Button>
