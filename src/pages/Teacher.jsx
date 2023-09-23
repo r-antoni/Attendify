@@ -30,6 +30,15 @@ const Teacher = () => {
     setUser(response.data);
   };
 
+  const deleteUser = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/teachers/${id}`);
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <div className="flex justify-between gap-2 mb-9">
@@ -48,7 +57,6 @@ const Teacher = () => {
             <Table.Head>
               <Table.HeadCell>ID</Table.HeadCell>
               <Table.HeadCell>Teacher Name</Table.HeadCell>
-              <Table.HeadCell>Phone Number</Table.HeadCell>
               <Table.HeadCell>Email</Table.HeadCell>
               <Table.HeadCell>Username</Table.HeadCell>
               <Table.HeadCell>Action</Table.HeadCell>
@@ -58,7 +66,6 @@ const Teacher = () => {
                 <Table.Row key={user.id}>
                   <Table.Cell>{index + 1}</Table.Cell>
                   <Table.Cell>{user.TeacherName}</Table.Cell>
-                  <Table.Cell>{user.Number}</Table.Cell>
                   <Table.Cell>{user.Email}</Table.Cell>
                   <Table.Cell>{user.Username}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
@@ -67,7 +74,7 @@ const Teacher = () => {
                         <FiEdit className="w-6 h-6 text-slate-500" />
                       </button>
                       <button>
-                        <BsTrash className="w-6 h-6 text-red-600" />
+                        <BsTrash className="w-6 h-6 text-red-600" onClick={() => deleteUser(user.id)} />
                       </button>
                     </div>
                   </Table.Cell>
