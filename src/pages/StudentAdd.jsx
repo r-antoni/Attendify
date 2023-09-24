@@ -56,13 +56,13 @@ const StudentAdd = () => {
         <Card className="w-full flex justify-center items-center">
           <h1 className="font-semibold text-2xl w-full flex justify-center text-title">Add a student</h1>
           <form onSubmit={saveUser}>
-            <div className="w-full flex flex-col justify-center items-center gap-5">
+            <div className="w-full flex flex-col justify-center items-center gap-5 text-title">
               <label htmlFor="">Name</label>
               <div>
                 <input
                   type="text"
                   placeholder="Name"
-                  className="input"
+                  className="input rounded-lg"
                   value={StudentName}
                   onChange={(e) => setStudentName(e.target.value)}
                 />
@@ -72,7 +72,7 @@ const StudentAdd = () => {
                 <input
                   type="text"
                   placeholder="Email"
-                  className="input"
+                  className="input rounded-lg"
                   value={Email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -82,7 +82,7 @@ const StudentAdd = () => {
                 <input
                   type="text"
                   placeholder="Username"
-                  className="input"
+                  className="input rounded-lg"
                   value={Username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
@@ -92,7 +92,7 @@ const StudentAdd = () => {
                 <input
                   type="password"
                   placeholder="Password"
-                  className="input"
+                  className="input rounded-lg"
                   value={Password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -102,7 +102,7 @@ const StudentAdd = () => {
                 <input
                   type="text"
                   placeholder="Address"
-                  className="input"
+                  className="input rounded-lg"
                   value={Address}
                   onChange={(e) => setAddress(e.target.value)}
                 />
