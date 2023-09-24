@@ -27,6 +27,7 @@ import Subject from "./pages/Subject";
 import SubjectAdd from "./pages/SubjectAdd";
 import Teacher from "./pages/Teacher";
 import TeacherAdd from "./pages/TeacherAdd";
+import TeacherUpdate from "./pages/TeacherUpdate";
 
 const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
               {
                 path: "add-teacher",
                 element: <TeacherAdd />,
+              },
+              {
+                path: "/teachers/update-teacher/:id",
+                element: <TeacherUpdate />,
               },
             ],
           },

@@ -17,6 +17,10 @@ const Teacher = () => {
       title: "Teachers",
       path: "/teachers",
     },
+    {
+      title: "Update Teacher",
+      path: "/teachers/update-teacher",
+    },
   ];
 
   const [users, setUser] = useState([]);
@@ -71,7 +75,9 @@ const Teacher = () => {
                   <Table.Cell className="flex cursor-pointer">
                     <div className="flex gap-x-2">
                       <button>
-                        <FiEdit className="w-6 h-6 text-slate-500" />
+                        <Link to={`update-teacher/${user.id}`}>
+                          <FiEdit className="w-6 h-6 text-slate-500" />
+                        </Link>
                       </button>
                       <button>
                         <BsTrash className="w-6 h-6 text-red-600" onClick={() => deleteUser(user.id)} />
