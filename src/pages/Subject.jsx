@@ -5,6 +5,10 @@ import {Link} from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
 import subject from "../assets/json/subject.json";
+import axios from "axios";
+import React, {useEffect, useState} from "react";
+import {BsTrash} from "react-icons/bs";
+import {FiEdit} from "react-icons/fi";
 
 const Subject = () => {
   const model = [
@@ -17,6 +21,27 @@ const Subject = () => {
       path: "/subjects",
     },
   ];
+
+  const [users, setUser] = useState([]);
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  const getUsers = async () => {
+    const response = await axios.get(`http://localhost:5010/subjects`);
+    setUser(response.data);
+  };
+
+  const deleteUser = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5010/subjects/${id}`);
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <div className="flex flex-row justify-between">
@@ -41,19 +66,21 @@ const Subject = () => {
               <Table.HeadCell>Action</Table.HeadCell>
             </Table.Head>
             <Table.Body>
-              {subject.map((data, i) => (
-                <Table.Row key={i}>
-                  <Table.Cell>{data.no}</Table.Cell>
-                  <Table.Cell>{data.subject_name}</Table.Cell>
-                  <Table.Cell>{data.course}</Table.Cell>
-                  <Table.Cell>{data.semester}</Table.Cell>
-                  <Table.Cell>{data.assigned_teacher}</Table.Cell>
+              {users.map((user, index) => (
+                <Table.Row key={user.id}>
+                  <Table.Cell>{index + 1}</Table.Cell>
+                  <Table.Cell>{user.SubjectName}</Table.Cell>
+                  <Table.Cell>{user.Course}</Table.Cell>
+                  <Table.Cell>{user.Semester}</Table.Cell>
+                  <Table.Cell>{user.TeacherName}</Table.Cell>
                   <Table.Cell className="flex gap-2">
                     <button>
-                      <GiCheckMark className="text-white bg-green-400 px-1 py-1 h-6 w-6 rounded" />
+                      <Link to={`update-subject/${user.id}`}>
+                        <FiEdit className="w-6 h-6 text-slate-500" />
+                      </Link>
                     </button>
                     <button>
-                      <HiXMark className="text-white bg-red-500 px-1 py-1 h-6 w-6 rounded" />
+                      <BsTrash className="w-6 h-6 text-red-600" onClick={() => deleteUser(user.id)} />
                     </button>
                   </Table.Cell>
                 </Table.Row>
