@@ -1,13 +1,11 @@
 import {Card} from "flowbite-react";
-import {Link} from "react-router-dom";
-import InputText from "../components/InputText";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
-const SubjectAdd = () => {
+const SubjectUpdate = () => {
   const model = [
     {
       title: "Home",
@@ -18,8 +16,8 @@ const SubjectAdd = () => {
       path: "/subjects",
     },
     {
-      title: "Add Subject",
-      path: "/add-subject",
+      title: "Update Subject",
+      path: "/subjects/update-subject",
     },
   ];
 
@@ -27,12 +25,17 @@ const SubjectAdd = () => {
   const [Course, setCourse] = useState("");
   const [Semester, setSemester] = useState("");
   const [TeacherName, setTeacherName] = useState("");
+  const {id} = useParams();
   const navigate = useNavigate();
 
-  const saveUser = async (e) => {
+  useEffect(() => {
+    getSubjectById();
+  }, []);
+
+  const updateSubject = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5010/subjects`, {
+      await axios.patch(`http://localhost:5010/subjects/${id}`, {
         SubjectName,
         Course,
         Semester,
@@ -44,23 +47,31 @@ const SubjectAdd = () => {
     }
   };
 
+  const getSubjectById = async () => {
+    const response = await axios.get(`http://localhost:5010/subjects/${id}`);
+    setSubjectName(response.data.SubjectName);
+    setCourse(response.data.Course);
+    setSemester(response.data.Semester);
+    setTeacherName(response.data.TeacherName);
+  };
+
   return (
-    <div>
-      <div className="flex-col gap-3 mb-9">
+    <div className="flex flex-col gap-10">
+      <div className="flex-col gap-3">
         <h2 className="text-3xl text-secondary">Subject</h2>
         <Breadcrumb model={model} />
       </div>
       <div>
         <Card className="w-full flex justify-center items-center">
-          <h1 className="font-semibold text-2xl w-full flex justify-center text-title">Add a subject</h1>
-          <form onSubmit={saveUser}>
-            <div className="w-full flex flex-col justify-center items-center gap-5 text-title">
-              <label htmlFor="">Subject Name</label>
+          <h1 className="font-semibold text-2xl w-full flex justify-center text-title">Edit Subject</h1>
+          <form onSubmit={updateSubject}>
+            <div className="w-full flex flex-col justify-center items-center gap-5">
+              <label htmlFor="">Name</label>
               <div>
                 <input
                   type="text"
                   placeholder="Name"
-                  className="input rounded-lg"
+                  className="input"
                   value={SubjectName}
                   onChange={(e) => setSubjectName(e.target.value)}
                 />
@@ -70,7 +81,7 @@ const SubjectAdd = () => {
                 <input
                   type="text"
                   placeholder="Course"
-                  className="input rounded-lg"
+                  className="input"
                   value={Course}
                   onChange={(e) => setCourse(e.target.value)}
                 />
@@ -80,22 +91,21 @@ const SubjectAdd = () => {
                 <input
                   type="text"
                   placeholder="Semester"
-                  className="input rounded-lg"
+                  className="input"
                   value={Semester}
                   onChange={(e) => setSemester(e.target.value)}
                 />
               </div>
-              <label htmlFor="">Assign Teacher</label>
+              <label htmlFor="">Teacher Name</label>
               <div>
                 <input
                   type="text"
-                  placeholder="Teacher Name"
-                  className="input rounded-lg"
+                  placeholder="Name"
+                  className="input"
                   value={TeacherName}
                   onChange={(e) => setTeacherName(e.target.value)}
                 />
               </div>
-              <label htmlFor="">Password</label>
               <div className="flex flex-row gap-4">
                 <Button type="submit">Submit</Button>
                 <Button color="bg-slate-400" type="reset">
@@ -110,4 +120,4 @@ const SubjectAdd = () => {
   );
 };
 
-export default SubjectAdd;
+export default SubjectUpdate;
