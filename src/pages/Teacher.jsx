@@ -4,7 +4,6 @@ import {FiEdit} from "react-icons/fi";
 import {Link} from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import Button from "../components/Button";
-import teacherCurrent from "../assets/json/TeacherCurrent.json";
 import axios from "axios";
 import React, {useEffect, useState} from "react";
 
@@ -18,6 +17,10 @@ const Teacher = () => {
       title: "Teachers",
       path: "/teachers",
     },
+    {
+      title: "Update Teacher",
+      path: "/teachers/update-teacher",
+    },
   ];
 
   const [users, setUser] = useState([]);
@@ -27,8 +30,17 @@ const Teacher = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get(`http://localhost:5000/users`);
+    const response = await axios.get(`http://localhost:5000/teachers`);
     setUser(response.data);
+  };
+
+  const deleteUser = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/teachers/${id}`);
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -49,7 +61,6 @@ const Teacher = () => {
             <Table.Head>
               <Table.HeadCell>ID</Table.HeadCell>
               <Table.HeadCell>Teacher Name</Table.HeadCell>
-              <Table.HeadCell>Phone Number</Table.HeadCell>
               <Table.HeadCell>Email</Table.HeadCell>
               <Table.HeadCell>Username</Table.HeadCell>
               <Table.HeadCell>Action</Table.HeadCell>
@@ -59,16 +70,17 @@ const Teacher = () => {
                 <Table.Row key={user.id}>
                   <Table.Cell>{index + 1}</Table.Cell>
                   <Table.Cell>{user.TeacherName}</Table.Cell>
-                  <Table.Cell>{user.Number}</Table.Cell>
                   <Table.Cell>{user.Email}</Table.Cell>
                   <Table.Cell>{user.Username}</Table.Cell>
                   <Table.Cell className="flex cursor-pointer">
                     <div className="flex gap-x-2">
                       <button>
-                        <FiEdit className="w-6 h-6 text-slate-500" />
+                        <Link to={`update-teacher/${user.id}`}>
+                          <FiEdit className="w-6 h-6 text-slate-500" />
+                        </Link>
                       </button>
                       <button>
-                        <BsTrash className="w-6 h-6 text-red-600" />
+                        <BsTrash className="w-6 h-6 text-red-600" onClick={() => deleteUser(user.id)} />
                       </button>
                     </div>
                   </Table.Cell>

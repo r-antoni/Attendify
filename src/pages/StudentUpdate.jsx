@@ -1,13 +1,11 @@
 import {Card} from "flowbite-react";
-import {Link} from "react-router-dom";
-import InputText from "../components/InputText";
 import Button from "../components/Button";
 import Breadcrumb from "../components/Breadcrumb";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
-const StudentAdd = () => {
+const StudentUpdate = () => {
   const model = [
     {
       title: "Home",
@@ -18,8 +16,8 @@ const StudentAdd = () => {
       path: "/students",
     },
     {
-      title: "Add Student",
-      path: "/add-student",
+      title: "Update Student",
+      path: "/students/update-student",
     },
   ];
 
@@ -28,12 +26,17 @@ const StudentAdd = () => {
   const [Address, setAddress] = useState("");
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
+  const {id} = useParams();
   const navigate = useNavigate();
 
-  const saveUser = async (e) => {
+  useEffect(() => {
+    getStudentById();
+  }, []);
+
+  const updateStudent = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5005/students`, {
+      await axios.patch(`http://localhost:5005/students/${id}`, {
         StudentName,
         Email,
         Address,
@@ -46,6 +49,15 @@ const StudentAdd = () => {
     }
   };
 
+  const getStudentById = async () => {
+    const response = await axios.get(`http://localhost:5005/students/${id}`);
+    setStudentName(response.data.StudentName);
+    setEmail(response.data.Email);
+    setAddress(response.data.Address);
+    setUsername(response.data.Username);
+    setPassword(response.data.Password);
+  };
+
   return (
     <div className="flex flex-col gap-10">
       <div className="flex-col gap-3">
@@ -54,8 +66,8 @@ const StudentAdd = () => {
       </div>
       <div>
         <Card className="w-full flex justify-center items-center">
-          <h1 className="font-semibold text-2xl w-full flex justify-center text-title">Add a student</h1>
-          <form onSubmit={saveUser}>
+          <h1 className="font-semibold text-2xl w-full flex justify-center text-title">Edit Student</h1>
+          <form onSubmit={updateStudent}>
             <div className="w-full flex flex-col justify-center items-center gap-5">
               <label htmlFor="">Name</label>
               <div>
@@ -121,4 +133,4 @@ const StudentAdd = () => {
   );
 };
 
-export default StudentAdd;
+export default StudentUpdate;

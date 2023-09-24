@@ -21,12 +21,14 @@ import Attendance from "./pages/Attendance";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import Report from "./pages/Report";
-import Students from "./pages/Students";
+import Student from "./pages/Student";
 import StudentAdd from "./pages/StudentAdd";
 import Subject from "./pages/Subject";
 import SubjectAdd from "./pages/SubjectAdd";
 import Teacher from "./pages/Teacher";
 import TeacherAdd from "./pages/TeacherAdd";
+import TeacherUpdate from "./pages/TeacherUpdate";
+import StudentUpdate from "./pages/StudentUpdate";
 
 const router = createBrowserRouter([
   {
@@ -83,7 +85,7 @@ const router = createBrowserRouter([
               },
               {
                 path: "students",
-                element: <Students />,
+                element: <Student />,
               },
               {
                 path: "subjects",
@@ -100,6 +102,14 @@ const router = createBrowserRouter([
               {
                 path: "add-teacher",
                 element: <TeacherAdd />,
+              },
+              {
+                path: "/teachers/update-teacher/:id",
+                element: <TeacherUpdate />,
+              },
+              {
+                path: "/students/update-student/:id",
+                element: <StudentUpdate />,
               },
             ],
           },
