@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <div className="pb-40 px-10 text-black text-sm font-medium">
+    <div className="pb-40 px-10 text-black text-sm font-medium" id="#learn">
     <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
   <h3
     className="mb-6 text-2xl font-bold text-title">

@@ -7,7 +7,7 @@ import Timesheet from "../assets/img/sheet.svg";
 const Features = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center text-title mt-40" id="#learn">
+      <div className="flex flex-col justify-center items-center text-title mt-40">
         <h3 className="text-2xl font-bold">Attendify Features</h3>
         <p className="py-2 tracking-widest">Efficiently manage everything on the go.</p>
       </div>
