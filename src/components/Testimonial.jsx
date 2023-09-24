@@ -2,16 +2,14 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <div className="pb-40 px-10 text-black text-sm">
+    <div className="pb-40 px-10 text-black text-sm font-medium">
     <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
   <h3
     className="mb-6 text-2xl font-bold text-title">
     Testimonials
   </h3>
   <p className="pb-10 tracking-widest">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error
-    amet numquam iure provident voluptate esse quasi, veritatis totam
-    voluptas nostrum quisquam eum porro a pariatur veniam.
+    Here is a few things our users said about our service.
   </p>
 </div>
 
@@ -20,16 +18,15 @@ const Testimonial = () => {
   <div className="mb-12 md:mb-0">
     <div className="mb-6 flex justify-center">
       <img
-        src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
-        className="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+        src="https://freeimghost.net/images/2023/09/23/3x4.jpeg"
+        className="w-32 h-36 rounded-full shadow-lg dark:shadow-black/30" />
     </div>
-    <h5 className="mb-4 text-xl font-semibold">Maria Smantha</h5>
+    <h5 className="mb-4 text-xl font-semibold">Student 1</h5>
     <h6 className="mb-4 font-semibold text-primary dark:text-primary-500">
-      Web Developer
+      Highschool Student
     </h6>
     <p className="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
-      id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+      The app make it easy for student to submit absence application even when they are sick at home.
     </p>
   </div>
 
@@ -37,16 +34,15 @@ const Testimonial = () => {
   <div className="mb-12 md:mb-0">
     <div className="mb-6 flex justify-center">
       <img
-        src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg"
-        className="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+        src="https://freeimghost.net/images/2023/09/23/istockphoto-538365340-2048x2048.jpeg"
+        className="w-32 h-36 rounded-full shadow-lg dark:shadow-black/30" />
     </div>
-    <h5 className="mb-4 text-xl font-semibold">Lisa Cudrow</h5>
+    <h5 className="mb-4 text-xl font-semibold">Teacher 1</h5>
     <h6 className="mb-4 font-semibold text-primary dark:text-primary-500">
-      Graphic Designer
+      Teacher
     </h6>
     <p className="mb-4">
-      Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-      suscipit laboriosam, nisi ut aliquid commodi.
+      It is easier to manage absence data for grading because we can receive report of student absence right away.
     </p>
   </div>
 
@@ -54,17 +50,16 @@ const Testimonial = () => {
   <div className="mb-0">
     <div className="mb-6 flex justify-center">
       <img
-        src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
-        className="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+        src="https://freeimghost.net/images/2023/09/23/alam.jpeg"
+        className="w-32 h-36 rounded-full shadow-lg dark:shadow-black/30" />
     </div>
     <div className="mb-12 md:mb-0">
-      <h5 className="mb-4 text-xl font-semibold">Lisa Cudrow</h5>
+      <h5 className="mb-4 text-xl font-semibold">Student 2</h5>
       <h6 className="mb-4 font-semibold text-primary dark:text-primary-400">
-        Graphic Designer
+        Elementary Student
       </h6>
       <p className="mb-4 text-neutral-600 dark:text-neutral-300">
-        Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid commodi.
+        The application is easy to use even for Elementary school students
       </p>
       
     </div>

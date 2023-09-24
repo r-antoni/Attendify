@@ -16,33 +16,28 @@ const Features = () => {
           <h4>Remote Submission</h4>
           <img src={Remote} alt="Remote logo" className="w-48 h-56" />
           <p className="text-sm text-black py-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis ea voluptates ut et id ab, quidem
-            impedit delectus vel blanditiis aut deserunt asperiores corporis? Tenetur sunt iste aperiam autem!
+            Students and teacher are able to submit and monitor absence even from the comfort of their home.
           </p>
         </div>
         <div className="flex flex-col items-center gap-5 w-60 h-[600px]">
           <h4>Online Timesheet</h4>
           <img src={Timesheet} alt="Timesheet logo" className="w-48 h-60" />
           <p className="text-sm text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda quis consequuntur in maxime impedit
-            odit numquam, laboriosam autem nihil culpa magnam maiores, facere illo iure unde vitae minima. Quo.
+            Get a clear timesheet with all the necessary data available
           </p>
         </div>
         <div className="flex flex-col items-center gap-5 w-60 h-[600px]">
           <h4>Absence Report</h4>
           <img src={Report} alt="Report logo" className="w-48 h-60" />
           <p className="text-sm text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore et dolor tempore facere aut totam unde,
-            rerum nihil eius odio est officia sequi amet nisi autem deserunt laborum. Dolorem, corrupti!
+            Get all the necessary data for grading students and others.
           </p>
         </div>
         <div className="flex flex-col items-center gap-5 w-60 h-[600px]">
           <h4>Real Time Data</h4>
           <img src={Real} alt="Real time logo" className="w-48 h-60" />
           <p className="text-sm text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iusto atque accusantium, laboriosam eius
-            eligendi molestiae, quam cum recusandae, iure non saepe possimus ducimus consequatur quod assumenda voluptas
-            ad quis!
+            All data regarding absence and students are updated as soon as it is verified by the respective administration.
           </p>
         </div>
       </div>
